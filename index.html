@@ -1,304 +1,316 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>jQuery Form Validator</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Abel" type="text/css"/>
-    <link rel="stylesheet" href="static/style/main.css" type="text/css"/>
-    <link rel="stylesheet" href="static/style/website.css" type="text/css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" type="text/css"/>
-    <link rel="shortcut icon" href="static/img/favicon.ico" type="image-x/icon"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Abel" type="text/css" />
+    <link rel="stylesheet" href="static/style/main.css" type="text/css" />
+    <link rel="stylesheet" href="static/style/website.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" type="text/css" />
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image-x/icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 </head>
+
 <body>
+    <header class="top-header">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="page-container">
+                    <a class="brand" href="#" id="logo">jQuery Form Validator</a>
 
-<header class="top-header">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="page-container">
-                <a class="brand" href="index.html" id="logo">jQuery Form Validator</a>
+                    <div class="top-menu">
+                        <a href="#" id="download-link">
+                            <i class="icon-download icon-white"></i>
+                            Download
+                        </a>
+                        <a href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank">
+                            <i class="icon-white icon-bookmark"></i>
+                            Github
+                        </a>
+                        <span class="lunr-search-wrapper">
+                            <label class="lunr-search-btn">
+                                <i class="icon-white icon-search"></i>
+                            </label>
+                            <input type="search" placeholder="Search..." />
+                        </span>
+                    </div>
 
-                <div class="top-menu">
-                    <a href="#" id="download-link">
-                        <i class="icon-download icon-white"></i>
-                        Download
-                    </a>
-                    <a href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank">
-                        <i class="icon-white icon-bookmark"></i>
-                        Github
-                    </a>
-                    <span class="lunr-search-wrapper">
-                        <label class="lunr-search-btn">
-                            <i class="icon-white icon-search"></i>
-                        </label>
-                        <input type="search" placeholder="Search..."/>
-                    </span>
+                    <div id="download-info">
+                        <div class="inner">
+                            <h3>CDN</h3>
+                            <p>
+                                <strong>
+                                    &lt;script
+                                    src=&quot;<span>//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js</span>&quot;&gt;&lt;/script&gt;
+                                </strong>
+                            </p>
+                            <h3>NPM</h3>
+                            <p>
+                                <strong>
+                                    $ npm i jquery-form-validator
+                                </strong>
+                            </p>
+                            <h3>Bower</h3>
+                            <p>
+                                <strong>
+                                    $ bower install jquery-form-validator
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+        </div>
+    </header>
 
-                <div id="download-info">
-                    <div class="inner">
-                        <h3>CDN</h3>
-                        <p>
-                            <strong>
-                                &lt;script src=&quot;<span>//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js</span>&quot;&gt;&lt;/script&gt;
-                            </strong>
-                        </p>
-                        <h3>NPM</h3>
-                        <p>
-                            <strong>
-                                $ npm i jquery-form-validator
-                            </strong>
-                        </p>
-                        <h3>Bower</h3>
-                        <p>
-                            <strong>
-                                $ bower install jquery-form-validator
-                            </strong>
-                        </p>
+
+    <div class="page-container">
+
+        <div class="row-fluid" id="content">
+            <div class="span3" id="side-col">
+
+                <div id="ad-wrapper">
+                    <div id="carbonads-container">
+                        <div class="carbonad">
+                            <div id="azcarbon"></div>
+                            <script async type="text/javascript"
+                                src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=formvalidatornet"
+                                id="_carbonads_js"></script>
+                        </div>
                     </div>
                 </div>
 
+                <ul class="nav nav-list well" id="submenu-container">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#reg-form">Form demo</a>
+                    </li>
+                    <li class="nav-header">Features</li>
+                    <li>
+                        <a href="#default-validators" class="menu-link">
+                            Default validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu default-validators">
+                        <ul>
+                            <li><a href="#default-validators_length">Length (required)</a></li>
+                            <li><a href="#default-validators_numbers">Numbers</a></li>
+                            <li><a href="#default-validators_email">E-mail</a></li>
+                            <li><a href="#default-validators_url">URL</a></li>
+                            <li><a href="#default-validators_dates">Date</a></li>
+                            <li><a href="#default-validators_alphanumeric">Alphanumeric</a></li>
+                            <li><a href="#default-validators_checkboxgroup">Checkbox group</a></li>
+                            <li><a href="#default-validators_custom">Regexp</a></li>
+                            <li><a href="#default-validators_restrict-length">Character count down</a></li>
+                            <li><a href="#default-validators_optional">Make validation optional</a></li>
+                            <li><a href="#default-validators_help">Display help text</a></li>
+                            <li><a href="#default-validators_blurred">Validate inputs on blur</a></li>
+                            <li><a href="#default-validators_suggest">Input suggestions</a></li>
+                            <li><a href="#default-validators_ignore">Ignoring characters</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#security-validators" class="menu-link">
+                            Security validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu security-validators">
+                        <ul>
+                            <li><a href="#security-validators_confirmation">Password confirmation</a></li>
+                            <li><a href="#security-validators_strength">Password strength</a></li>
+                            <li><a href="#security-validators_backend"> Server-side validation</a></li>
+                            <li><a href="#security-validators_creditcard">Credit card validation</a></li>
+                            <li><a href="#security-validators_spamcheck">Simple captcha</a></li>
+                            <li><a href="#security-validators_recaptcha">Google reCAPTCHA</a></li>
+                            <li><a href="#security-validators_letternumeric">Letters and numbers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#date-validators" class="menu-link">
+                            Date validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu date-validators">
+                        <ul>
+                            <li><a href="#date-validators_birthdate">Birth date</a></li>
+                            <li><a href="#date-validators_time"> Time</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#file-validators" class="menu-link">
+                            File validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu file-validators">
+                        <ul>
+                            <li><a href="#file-validators_size">File size</a></li>
+                            <li><a href="#file-validators_type">File type</a></li>
+                            <li><a href="#file-validators_dimension">Image dimension and ratio</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#location-validators" class="menu-link">
+                            Location validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu location-validators">
+                        <ul>
+                            <li><a href="#location-validators_country">Country</a></li>
+                            <li><a href="#location-validators_state">US State</a></li>
+                            <li><a href="#location-validators_longlat">Longitude and latitude</a></li>
+                            <li><a href="#location-validators_suggestions">Suggest country/state</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#country-specific-validators" class="menu-link">
+                            Country specific validators
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu country-specific-validators">
+                        <ul>
+                            <li><a href="#country-specific-validators_brazil">Brazil</a></li>
+                            <li><a href="#country-specific-validators_poland">Poland</a></li>
+                            <li><a href="#country-specific-validators_sweden">Sweden</a></li>
+                            <li><a href="#country-specific-validators_uk">United Kingdom</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#data-sanitation" class="menu-link">
+                            Data Sanitation
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu data-sanitation">
+                        <ul>
+                            <li><a href="#data-sanitation_sanitize_options">Sanitation options</a></li>
+                            <li><a href="#data-sanitation_numberformat">Number formatting</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#logic" class="menu-link">
+                            Logic
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu logic">
+                        <ul>
+                            <li><a href="#logic_depending">Dependent validation</a></li>
+                            <li><a href="#logic_oneof">Require &quot;one-of&quot;</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sepa" class="menu-link">
+                            Sepa
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu sepa">
+                        <ul>
+                            <li><a href="#sepa_iban">IBAN</a></li>
+                            <li><a href="#sepa_bic">BIC</a></li>
+                            <li><a href="#sepa_sepa">Sepa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-header">Customizations</li>
+                    <li>
+                        <a href="#configuration" class="menu-link">
+                            Setup and configuration
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu configuration">
+                        <ul>
+                            <li><a href="#configuration_setup">Setup</a></li>
+                            <li><a href="#configuration_options">Configuration options</a></li>
+                            <li><a href="#configuration_modules">Loading modules</a></li>
+                            <li><a href="#configuration_callbacks">Validation callbacks</a></li>
+                            <li><a href="#configuration_styling">Styling</a></li>
+                            <li><a href="#configuration_theme">Default theme</a></li>
+                            <li><a href="#configuration_disable">Disabling features</a></li>
+                            <li><a href="#configuration_html5">HTML5 support</a></li>
+                            <li><a href="#configuration_position">Error message position</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#localization" class="menu-link">
+                            Localization
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu localization">
+                        <ul>
+                            <li><a href="#localization_submit">Built-in language support</a></li>
+                            <li><a href="#localization_inline">Inline dialog declaration</a></li>
+                            <li><a href="#localization_object">Custom language object</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#advanced" class="menu-link">
+                            Advanced examples
+                            <span class="arr">&#9660;</span>
+                        </a>
+                    </li>
+                    <li class="submenu advanced">
+                        <ul>
+                            <li><a href="#advanced_programmatically">Validate programmatically</a></li>
+                            <li><a href="#advanced_submit">Validate form without submit</a></li>
+                            <li><a href="#advanced_jsonly">Setup validation using JavaScript</a></li>
+                            <li><a href="#advanced_toggleDisabled">Toggle disabled form submit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#custom-validators">Writing custom validators</a>
+                    </li>
+                    <li class="nav-header">Misc</li>
+                    <li>
+                        <a href="#credits">Credits</a>
+                    </li>
+                    <li>
+                        <a href="#donate">Donate</a>
+                    </li>
+                    <li>
+                        <a href="#license">License</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div>
-</header>
+            <div class="span9" id="main-col">
+                <div class="page home" id="home">
+                    <h1 class="front-page">Form validation made easy</h1>
 
+                    <p class="intro-txt">
+                        jQuery Form Validator is a feature rich and <strong>multilingual</strong> jQuery plugin that
+                        makes it easy to validate
+                        user input while <strong>keeping your HTML markup clean from javascript</strong> code. Even
+                        though this
+                        plugin has a wide range of validation functions it's designed to require <strong>as little
+                            <img src="static/img/jquery.png" alt="jQuery" class="jquery-logo" />
+                            network traffic as possible</strong>. This is achieved by grouping together validation
+                        functions in
+                        &quot;modules&quot;, making it possible to load only those functions
+                        that's needed to validate a particular form.
+                    </p>
 
-<div class="page-container">
+                    <p>
+                        This plugin is available through <a href="#" class="click-download">cdnjs</a>,
+                        <a href="https://www.npmjs.com/package/jquery-form-validator" target="_blank">npm</a>,
+                        <a href="#" class="click-download">bower</a> and
+                        <a href="https://github.com/victorjonsson/jQuery-Form-Validator/" target="_blank">github</a>.
+                    </p>
 
-    <div class="row-fluid" id="content">
-        <div class="span3" id="side-col">
+                    <h3>Basic example</h3>
 
-            <div id="ad-wrapper">
-                <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=formvalidatornet" id="_carbonads_js"></script></div></div>
-            </div>
-
-            <ul class="nav nav-list well" id="submenu-container">
-                        <li>
-                                <a href="#home">Home</a>
-                        </li>
-                        <li>
-                                <a href="#reg-form">Form demo</a>
-                        </li>
-                            <li class="nav-header">Features</li>
-                        <li>
-                                <a href="#default-validators" class="menu-link">
-                                    Default validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu default-validators">
-                                <ul>
-                                        <li><a href="#default-validators_length">Length (required)</a></li>
-                                        <li><a href="#default-validators_numbers">Numbers</a></li>
-                                        <li><a href="#default-validators_email">E-mail</a></li>
-                                        <li><a href="#default-validators_url">URL</a></li>
-                                        <li><a href="#default-validators_dates">Date</a></li>
-                                        <li><a href="#default-validators_alphanumeric">Alphanumeric</a></li>
-                                        <li><a href="#default-validators_checkboxgroup">Checkbox group</a></li>
-                                        <li><a href="#default-validators_custom">Regexp</a></li>
-                                        <li><a href="#default-validators_restrict-length">Character count down</a></li>
-                                        <li><a href="#default-validators_optional">Make validation optional</a></li>
-                                        <li><a href="#default-validators_help">Display help text</a></li>
-                                        <li><a href="#default-validators_blurred">Validate inputs on blur</a></li>
-                                        <li><a href="#default-validators_suggest">Input suggestions</a></li>
-                                        <li><a href="#default-validators_ignore">Ignoring characters</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#security-validators" class="menu-link">
-                                    Security validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu security-validators">
-                                <ul>
-                                        <li><a href="#security-validators_confirmation">Password confirmation</a></li>
-                                        <li><a href="#security-validators_strength">Password strength</a></li>
-                                        <li><a href="#security-validators_backend"> Server-side validation</a></li>
-                                        <li><a href="#security-validators_creditcard">Credit card validation</a></li>
-                                        <li><a href="#security-validators_spamcheck">Simple captcha</a></li>
-                                        <li><a href="#security-validators_recaptcha">Google reCAPTCHA</a></li>
-                                        <li><a href="#security-validators_letternumeric">Letters and numbers</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#date-validators" class="menu-link">
-                                    Date validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu date-validators">
-                                <ul>
-                                        <li><a href="#date-validators_birthdate">Birth date</a></li>
-                                        <li><a href="#date-validators_time"> Time</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#file-validators" class="menu-link">
-                                    File validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu file-validators">
-                                <ul>
-                                        <li><a href="#file-validators_size">File size</a></li>
-                                        <li><a href="#file-validators_type">File type</a></li>
-                                        <li><a href="#file-validators_dimension">Image dimension and ratio</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#location-validators" class="menu-link">
-                                    Location validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu location-validators">
-                                <ul>
-                                        <li><a href="#location-validators_country">Country</a></li>
-                                        <li><a href="#location-validators_state">US State</a></li>
-                                        <li><a href="#location-validators_longlat">Longitude and latitude</a></li>
-                                        <li><a href="#location-validators_suggestions">Suggest country/state</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#country-specific-validators" class="menu-link">
-                                    Country specific validators
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu country-specific-validators">
-                                <ul>
-                                        <li><a href="#country-specific-validators_brazil">Brazil</a></li>
-                                        <li><a href="#country-specific-validators_poland">Poland</a></li>
-                                        <li><a href="#country-specific-validators_sweden">Sweden</a></li>
-                                        <li><a href="#country-specific-validators_uk">United Kingdom</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#data-sanitation" class="menu-link">
-                                    Data Sanitation
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu data-sanitation">
-                                <ul>
-                                        <li><a href="#data-sanitation_sanitize_options">Sanitation options</a></li>
-                                        <li><a href="#data-sanitation_numberformat">Number formatting</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#logic" class="menu-link">
-                                    Logic
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu logic">
-                                <ul>
-                                        <li><a href="#logic_depending">Dependent validation</a></li>
-                                        <li><a href="#logic_oneof">Require &quot;one-of&quot;</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#sepa" class="menu-link">
-                                    Sepa
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu sepa">
-                                <ul>
-                                        <li><a href="#sepa_iban">IBAN</a></li>
-                                        <li><a href="#sepa_bic">BIC</a></li>
-                                        <li><a href="#sepa_sepa">Sepa</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-header">Customizations</li>
-                        <li>
-                                <a href="#configuration" class="menu-link">
-                                    Setup and configuration
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu configuration">
-                                <ul>
-                                        <li><a href="#configuration_setup">Setup</a></li>
-                                        <li><a href="#configuration_options">Configuration options</a></li>
-                                        <li><a href="#configuration_modules">Loading modules</a></li>
-                                        <li><a href="#configuration_callbacks">Validation callbacks</a></li>
-                                        <li><a href="#configuration_styling">Styling</a></li>
-                                        <li><a href="#configuration_theme">Default theme</a></li>
-                                        <li><a href="#configuration_disable">Disabling features</a></li>
-                                        <li><a href="#configuration_html5">HTML5 support</a></li>
-                                        <li><a href="#configuration_position">Error message position</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#localization" class="menu-link">
-                                    Localization
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu localization">
-                                <ul>
-                                        <li><a href="#localization_submit">Built-in language support</a></li>
-                                        <li><a href="#localization_inline">Inline dialog declaration</a></li>
-                                        <li><a href="#localization_object">Custom language object</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#advanced" class="menu-link">
-                                    Advanced examples
-                                    <span class="arr">&#9660;</span>
-                                </a>
-                        </li>
-                            <li class="submenu advanced">
-                                <ul>
-                                        <li><a href="#advanced_programmatically">Validate programmatically</a></li>
-                                        <li><a href="#advanced_submit">Validate form without submit</a></li>
-                                        <li><a href="#advanced_jsonly">Setup validation using JavaScript</a></li>
-                                        <li><a href="#advanced_toggleDisabled">Toggle disabled form submit</a></li>
-                                </ul>
-                            </li>
-                        <li>
-                                <a href="#custom-validators">Writing custom validators</a>
-                        </li>
-                            <li class="nav-header">Misc</li>
-                        <li>
-                                <a href="#credits">Credits</a>
-                        </li>
-                        <li>
-                                <a href="#donate">Donate</a>
-                        </li>
-                        <li>
-                                <a href="#license">License</a>
-                        </li>
-            </ul>
-        </div>
-        <div class="span9" id="main-col">
-            <div class="page home" id="home">
-                <h1 class="front-page">Form validation made easy</h1>
-
-<p class="intro-txt">
-    jQuery Form Validator is a feature rich and <strong>multilingual</strong> jQuery plugin that makes it easy to validate
-    user input while <strong>keeping your HTML markup clean from javascript</strong> code. Even though this
-    plugin has a wide range of validation functions it's designed to require <strong>as little
-    <img src="static/img/jquery.png" alt="jQuery" class="jquery-logo" />
-    network traffic as possible</strong>. This is achieved by grouping together validation functions in
-    &quot;modules&quot;, making it possible to load only those functions
-    that's needed to validate a particular form.
-</p>
-
-<p>
-    This plugin is available through <a href="#" class="click-download">cdnjs</a>,
-    <a href="https://www.npmjs.com/package/jquery-form-validator" target="_blank">npm</a>,
-    <a href="#" class="click-download">bower</a> and
-    <a href="https://github.com/victorjonsson/jQuery-Form-Validator/" target="_blank">github</a>.
-</p>
-
-<h3>Basic example</h3>
-
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
 <form action="/registration" method="POST">
     <p>
@@ -330,122 +342,121 @@
 </pre>
 
 
-<div class="well no-bg">
-    <h2>
-        Support for HTML5
-    </h2>
-    <img src="static/img/html5-logo.png" width="110" alt="html5" />
-    <p>The <em>html5</em> module makes it possible to validate user input using the native
-        attributes, in accordance to the HTML5 specification.</p>
-    <p>
-        <a href="#configuration_html5">Read more &raquo;</a>
-    </p>
-</div>
-            </div>
-            <div class="page reg-form" id="reg-form">
-                <h1>Form demo</h1>
+                    <div class="well no-bg">
+                        <h2>
+                            Support for HTML5
+                        </h2>
+                        <img src="static/img/html5-logo.png" width="110" alt="html5" />
+                        <p>The <em>html5</em> module makes it possible to validate user input using the native
+                            attributes, in accordance to the HTML5 specification.</p>
+                        <p>
+                            <a href="#configuration_html5">Read more &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="page reg-form" id="reg-form">
+                    <h1>Form demo</h1>
 
-<p>
-    The following form contains some typical validators needed
-    in a registration form. This jQuery plugin has support for a lot more
-    validation functions, you find them all in the menu to the right.
-</p>
+                    <p>
+                        The following form contains some typical validators needed
+                        in a registration form. This jQuery plugin has support for a lot more
+                        validation functions, you find them all in the menu to the right.
+                    </p>
 
-<p>
-    Read the <a href="#configuration">setup guide</a> if you want to know which
-    configuration options that are available when setting up the validation.
-</p>
+                    <p>
+                        Read the <a href="#configuration">setup guide</a> if you want to know which
+                        configuration options that are available when setting up the validation.
+                    </p>
 
-<p>
-   Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form class="form-horizontal well test-form">
-    <div class="control-group">
-        <label class="control-label">E-mail</label>
-        <div class="controls">
-            <input name="email" type="email" data-validation="email">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">User name</label>
+                    <form class="form-horizontal well test-form">
+                        <div class="control-group">
+                            <label class="control-label">E-mail</label>
+                            <div class="controls">
+                                <input name="email" type="email" data-validation="email">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">User name</label>
 
-        <div class="controls">
-            <input name="email" type="text"
-                   data-validation="alphanumeric length"
-                   data-validation-length="3-12"
-                   data-validation-error-msg="The user name has to be an alphanumeric value between 3-12 characters">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Password</label>
-        <div class="controls">
-            <input type="password" name="pass_confirmation" data-validation="strength" data-validation-strength="2">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Repeat password</label>
+                            <div class="controls">
+                                <input name="email" type="text" data-validation="alphanumeric length"
+                                    data-validation-length="3-12"
+                                    data-validation-error-msg="The user name has to be an alphanumeric value between 3-12 characters">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Password</label>
+                            <div class="controls">
+                                <input type="password" name="pass_confirmation" data-validation="strength"
+                                    data-validation-strength="2">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Repeat password</label>
 
-        <div class="controls">
-            <input type="password" name="pass" data-validation="confirmation">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Birth date</label>
+                            <div class="controls">
+                                <input type="password" name="pass" data-validation="confirmation">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Birth date</label>
 
-        <div class="controls">
-            <input data-validation="birthdate" type="text" data-validation-help="yyyy-mm-dd">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Country</label>
+                            <div class="controls">
+                                <input data-validation="birthdate" type="text" data-validation-help="yyyy-mm-dd">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Country</label>
 
-        <div class="controls">
-            <input name="country" type="text" data-validation="country">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Profile image</label>
+                            <div class="controls">
+                                <input name="country" type="text" data-validation="country">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Profile image</label>
 
-        <div class="controls">
-            <input type="file" data-validation="size mime required"
-                   data-validation-allowing="jpg, png"
-                   data-validation-max-size="300kb"
-                   data-validation-error-msg-required="No image selected"
-                    />
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            User presentation
-        </label>
+                            <div class="controls">
+                                <input type="file" data-validation="size mime required"
+                                    data-validation-allowing="jpg, png" data-validation-max-size="300kb"
+                                    data-validation-error-msg-required="No image selected" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                User presentation
+                            </label>
 
-        <div class="controls">
-            <span class="max-chars" style="background: #EEE; color: #999">100</span> chars left<br/>
-            <textarea class="length-restricted"></textarea>
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-        </label>
+                            <div class="controls">
+                                <span class="max-chars" style="background: #EEE; color: #999">100</span> chars
+                                left<br />
+                                <textarea class="length-restricted"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                            </label>
 
-        <div class="controls">
-            <input type="checkbox" name="check" value="1"
-                   data-validation="required"
-                   data-validation-error-msg="You have to agree to our terms"
-                   style="vertical-align: 1px; margin-right: 3px">
-            I agree to the <strong>terms of service</strong>
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <button type="submit" class="btn btn-info">Validate</button>
-            <input class="btn" type="reset" value="Reset form" />
-        </div>
-    </div>
-</form>
+                            <div class="controls">
+                                <input type="checkbox" name="check" value="1" data-validation="required"
+                                    data-validation-error-msg="You have to agree to our terms"
+                                    style="vertical-align: 1px; margin-right: 3px">
+                                I agree to the <strong>terms of service</strong>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="btn btn-info">Validate</button>
+                                <input class="btn" type="reset" value="Reset form" />
+                            </div>
+                        </div>
+                    </form>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
 <form action="" id="registration-form">
     <p>
@@ -513,19 +524,19 @@
 
 &lt;/script&gt;
 ...</pre>
-            </div>
-            <div class="page default-validators" id="default-validators">
-                <h1>Default validators</h1>
+                </div>
+                <div class="page default-validators" id="default-validators">
+                    <h1>Default validators</h1>
 
-<p>The default features of this plugin doesn't require you to
-    load any module. Here you can try out a <a href="#complete-test-form">complete form</a> with
-    all default validators present.</p>
+                    <p>The default features of this plugin doesn't require you to
+                        load any module. Here you can try out a <a href="#complete-test-form">complete form</a> with
+                        all default validators present.</p>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="length:Length (required)">Answer length (required)</h3>
+                    <h3 data-page-section="length:Length (required)">Answer length (required)</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Require an answer (can be applied to all types of inputs and select elements) -->
 <input type="text" data-validation="required">
 <input type="checkbox" name="agreement" data-validation="required">
@@ -551,15 +562,16 @@
   <option>C</option>
   <option>D</option>
   <option>E</option>
-</select>   
+</select>
 </pre>
 
-<p><em>This plugin also supports the attributes &quot;required&quot; and &quot;maxlength&quot; by using
-    the <a href="#configuration_html5">Html5 module</a>.</em></p>
+                    <p><em>This plugin also supports the attributes &quot;required&quot; and &quot;maxlength&quot; by
+                            using
+                            the <a href="#configuration_html5">Html5 module</a>.</em></p>
 
 
-<h3 data-page-section="numbers:Numbers">Numbers</h3>
-<pre class="prettyprint convert-code">
+                    <h3 data-page-section="numbers:Numbers">Numbers</h3>
+                    <pre class="prettyprint convert-code">
 <!-- Any numerical value -->
 <input type="text" data-validation="number">
 
@@ -582,8 +594,8 @@
 <input type="text" data-validation="number" data-validation-allowing="range[0.05;0.5],float">
                 </pre>
 
-<p>You can also define the decimal separator when initializing the validation.</p>
-<pre class="prettyprint">
+                    <p>You can also define the decimal separator when initializing the validation.</p>
+                    <pre class="prettyprint">
 <div class="convert-code">
     <p>
         <strong>Average points</strong><br />
@@ -598,27 +610,30 @@
     });
 &lt;/script&gt;</pre>
 
-<p>Inputs of type &quot;number&quot; will also become validated by loading the <a href="#configuration_html5">html5 module</a>.</p>
+                    <p>Inputs of type &quot;number&quot; will also become validated by loading the <a
+                            href="#configuration_html5">html5 module</a>.</p>
 
 
-<h3 data-page-section="email:E-mail">E-mail</h3>
-<pre class="prettyprint convert-code">
+                    <h3 data-page-section="email:E-mail">E-mail</h3>
+                    <pre class="prettyprint convert-code">
 <input type="text" data-validation="email">
 </pre>
 
-<p>Inputs of type &quot;email&quot; will also become validated by loading the <a href="#configuration_html5">html5 module</a>.</p>
+                    <p>Inputs of type &quot;email&quot; will also become validated by loading the <a
+                            href="#configuration_html5">html5 module</a>.</p>
 
 
-<h3 data-page-section="url:URL">URL:s</h3>
-<pre class="prettyprint convert-code">
+                    <h3 data-page-section="url:URL">URL:s</h3>
+                    <pre class="prettyprint convert-code">
 <input type="text" data-validation="url">
 </pre>
 
-<p>Inputs of type &quot;url&quot; will also become validated by loading the <a href="#configuration_html5">html5 module</a>.</p>
+                    <p>Inputs of type &quot;url&quot; will also become validated by loading the <a
+                            href="#configuration_html5">html5 module</a>.</p>
 
-<h3 data-page-section="dates:Date">Date</h3>
+                    <h3 data-page-section="dates:Date">Date</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate date formatted yyyy-mm-dd -->
 <input type="text" data-validation="date">
 
@@ -628,13 +643,13 @@
 <!-- Validate date formatted dd/mm/yyyy -->
 <input type="text" data-validation="date" data-validation-format="dd/mm/yyyy">
                 </pre>
-<p>
-    See the <a href="#date-validators">date module</a> for further validators.
-</p>
+                    <p>
+                        See the <a href="#date-validators">date module</a> for further validators.
+                    </p>
 
-<h3 data-page-section="alphanumeric:Alphanumeric">Alphanumeric</h3>
+                    <h3 data-page-section="alphanumeric:Alphanumeric">Alphanumeric</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- This input requires an answer that contains only letters a-z and/or numbers -->
 <input type="text" data-validation="alphanumeric">
 
@@ -642,35 +657,39 @@
 <input type="text" data-validation="alphanumeric" data-validation-allowing="-_">
 </pre>
 
-<p>
-    If you want to allow any kind of letters (not only A-Z) you're looking for the <a href="#security-validators_letternumeric">letternumeric</a> validator.
-</p>
+                    <p>
+                        If you want to allow any kind of letters (not only A-Z) you're looking for the <a
+                            href="#security-validators_letternumeric">letternumeric</a> validator.
+                    </p>
 
-<!-- Added by Steve Wasiura  stevewasiura.waztech.com -->
-<h3 data-page-section="checkboxgroup:Checkbox group">Checkboxes Group</h3>
-<p>Validate qty of checkboxes in a group (same name) have been checked, using min, max or range. Only the first checkbox element in the group needs to have the validation attributes added.
-</p>
+                    <!-- Added by Steve Wasiura  stevewasiura.waztech.com -->
+                    <h3 data-page-section="checkboxgroup:Checkbox group">Checkboxes Group</h3>
+                    <p>Validate qty of checkboxes in a group (same name) have been checked, using min, max or range.
+                        Only the first checkbox element in the group needs to have the validation attributes added.
+                    </p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Require checkboxes in this group, min1 -->
 <input type="checkbox" name="newsletters[]" data-validation="checkbox_group" data-validation-qty="min1">
 </pre>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Require checkboxes in this group, max3 -->
 <input type="checkbox" name="newsletters[]" data-validation="checkbox_group" data-validation-qty="max3">
 </pre>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Require checkboxes in this group, min1, max4 -->
 <input type="checkbox" name="newsletters[]" data-validation="checkbox_group" data-validation-qty="1-4">
 </pre>
 
-<p>
-    If your checkboxes group is generated by a server-side script and you don't want to add the validation attributes to each input element, you can use this javascript snippet before calling the validatorLoad() function
-</p>
+                    <p>
+                        If your checkboxes group is generated by a server-side script and you don't want to add the
+                        validation attributes to each input element, you can use this javascript snippet before calling
+                        the validatorLoad() function
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;!-- Add validation attributes to first input element in
  checkboxes group, before loading validator --&gt;
 &lt;script&gt;
@@ -683,18 +702,18 @@ $("[name='newsletters[]']:eq(0)")
 
 
 
-<h3 data-page-section="custom:Regexp">Regexp</h3>
-<pre class="prettyprint convert-code">
+                    <h3 data-page-section="custom:Regexp">Regexp</h3>
+                    <pre class="prettyprint convert-code">
 <!-- This input would only allow lowercase letters a-z -->
 <input type="text" data-validation="custom" data-validation-regexp="^([a-z]+)$">
 </pre>
 
-<p>This plugin also supports the attribute &quot;pattern&quot; by using
-    the <a href="#configuration_html5">Html5 module</a>.</p>
+                    <p>This plugin also supports the attribute &quot;pattern&quot; by using
+                        the <a href="#configuration_html5">Html5 module</a>.</p>
 
-<h3 data-page-section="restrict-length:Character count down">Character count down</h3>
+                    <h3 data-page-section="restrict-length:Character count down">Character count down</h3>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
     <p>
         History (<span id="maxlength">50</span> characters left)
@@ -705,26 +724,28 @@ $("[name='newsletters[]']:eq(0)")
     $('#area').restrictLength($('#maxlength'));
 &lt;/script&gt;
 </pre>
-<h3 data-page-section="optional:Make validation optional">Make validation optional</h3>
-<pre class="prettyprint convert-code">
+                    <h3 data-page-section="optional:Make validation optional">Make validation optional</h3>
+                    <pre class="prettyprint convert-code">
 <!-- This input will only be validated if a value is given -->
 <input type="text" data-validation="url" data-validation-optional="true">
 </pre>
 
-<p>You can also use the <a href="#logic_depending">logic module</a> if you want the validation
-    of an input depend on another input having a value.</p>
+                    <p>You can also use the <a href="#logic_depending">logic module</a> if you want the validation
+                        of an input depend on another input having a value.</p>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="help:Display help text">Display help text</h3>
+                    <h3 data-page-section="help:Display help text">Display help text</h3>
 
-<p>It is possible to display help information beside each input. The text will
-    fade in when the input gets focus on and fade out when the input looses focus. The container for the help text will
-    have the class
-    <em>form-help</em>. If you don't want this feature you can read the <a href="#configuration">setup guide</a> on how
-    to disable it.</p>
+                    <p>It is possible to display help information beside each input. The text will
+                        fade in when the input gets focus on and fade out when the input looses focus. The container for
+                        the help text will
+                        have the class
+                        <em>form-help</em>. If you don't want this feature you can read the <a
+                            href="#configuration">setup guide</a> on how
+                        to disable it.</p>
 
-<pre class="prettyprint"><div class="convert-code">
+                    <pre class="prettyprint"><div class="convert-code">
     <form action="" id="some-form">
         <p>
             <strong>Why not?</strong>
@@ -734,17 +755,18 @@ $("[name='newsletters[]']:eq(0)")
     </form>
 </div></pre>
 
-<h3 data-page-section="blurred:Validate inputs on blur">Validate inputs when blurred</h3>
+                    <h3 data-page-section="blurred:Validate inputs on blur">Validate inputs when blurred</h3>
 
-<p>By default each input will become validated immediately when the input looses focus.
-    If you don't want this feature you can read the <a href="#configuration_disable">setup guide</a> on how to disable it.</p>
+                    <p>By default each input will become validated immediately when the input looses focus.
+                        If you don't want this feature you can read the <a href="#configuration_disable">setup guide</a>
+                        on how to disable it.</p>
 
-<h3 data-page-section="suggest:Input suggestions">Input suggestions</h3>
+                    <h3 data-page-section="suggest:Input suggestions">Input suggestions</h3>
 
-<p>There are two ways you can give suggestions to the user while the user types. </p>
+                    <p>There are two ways you can give suggestions to the user while the user types. </p>
 
-<div class="pre-title"><strong>1) Using attribute data-suggestions</strong></div>
-<pre class="prettyprint"><div class="convert-code">
+                    <div class="pre-title"><strong>1) Using attribute data-suggestions</strong></div>
+                    <pre class="prettyprint"><div class="convert-code">
     <p>
         What's your favorite color?
         <input name="color" data-suggestions="White, Green, Blue, Black, Brown"/>
@@ -754,9 +776,9 @@ $("[name='newsletters[]']:eq(0)")
 &lt;/form&gt;
 </pre>
 
-<div class="pre-title"><strong>2) Using $.formUtils.suggest()</strong></div>
+                    <div class="pre-title"><strong>2) Using $.formUtils.suggest()</strong></div>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script&gt;
     var largeArray = [];
     largeArray.push('Something');
@@ -767,18 +789,19 @@ $("[name='newsletters[]']:eq(0)")
 &lt;/script&gt;
 </pre>
 
-<p>This plugin also supports the <code>data-list</code> element by using
-    the <a href="#configuration_html5">Html5 module</a>.</p>
+                    <p>This plugin also supports the <code>data-list</code> element by using
+                        the <a href="#configuration_html5">Html5 module</a>.</p>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="ignore:Ignoring characters">Ignoring characters</h3>
+                    <h3 data-page-section="ignore:Ignoring characters">Ignoring characters</h3>
 
-<p>
-    You can tell any validator to ignore certain characters by using the attribute <code>data-validation-ignore</code> (comma separated list).
-</p>
+                    <p>
+                        You can tell any validator to ignore certain characters by using the attribute
+                        <code>data-validation-ignore</code> (comma separated list).
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
 <p>
     How much do you want to donate?
@@ -788,113 +811,119 @@ $("[name='newsletters[]']:eq(0)")
 </div>
 </pre>
 
-<h2>Example form</h2>
+                    <h2>Example form</h2>
 
-<p>
-    Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form id="complete-test-form" class="form-horizontal well test-form">
-    <div class="control-group">
-        <label class="control-label">E-mail</label>
+                    <form id="complete-test-form" class="form-horizontal well test-form">
+                        <div class="control-group">
+                            <label class="control-label">E-mail</label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="email" placeholder="E-mail" data-validation-help="Some help info...">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">URL</label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="email" placeholder="E-mail"
+                                    data-validation-help="Some help info...">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">URL</label>
 
-        <div class="controls">
-            <input  type="text" name="email" data-validation="url" placeholder="http://">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Number</label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="url" placeholder="http://">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Number</label>
 
-        <div class="controls">
-            <input type="text" name="num" data-validation="number" data-validation-allowing="negative,number">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Only allows alphanumeric characters and hyphen and underscore</label>
+                            <div class="controls">
+                                <input type="text" name="num" data-validation="number"
+                                    data-validation-allowing="negative,number">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Only allows alphanumeric characters and hyphen and
+                                underscore</label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="alphanumeric" data-validation-allowing="-_">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Only lowercase letters a-z (regexp)</label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="alphanumeric"
+                                    data-validation-allowing="-_">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Only lowercase letters a-z (regexp)</label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="custom" data-validation-regexp="^([a-z]+)$">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            Minimum 5 chars
-        </label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="custom"
+                                    data-validation-regexp="^([a-z]+)$">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                Minimum 5 chars
+                            </label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="length" data-validation-length="min5">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            Maximum 5 chars
-        </label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="length" data-validation-length="min5">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                Maximum 5 chars
+                            </label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="length" data-validation-length="max5">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            Between 3-5 chars
-        </label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="length" data-validation-length="max5">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                Between 3-5 chars
+                            </label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="length" data-validation-length="3-5">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            What's your favorite color?
-        </label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="length" data-validation-length="3-5">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                What's your favorite color?
+                            </label>
 
-        <div class="controls">
-            <input type="text" name="color"
-                   data-suggestions="Blue, Green, White, Red, Magenta, Orange, Black, Gray, Yellow, Brown, Purple">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            Validate e-mail but only if
-            an answer is given
-        </label>
+                            <div class="controls">
+                                <input type="text" name="color"
+                                    data-suggestions="Blue, Green, White, Red, Magenta, Orange, Black, Gray, Yellow, Brown, Purple">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                Validate e-mail but only if
+                                an answer is given
+                            </label>
 
-        <div class="controls">
-            <input type="text" name="email" data-validation="email" data-validation-optional="true">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">
-            Restricted length
-        </label>
+                            <div class="controls">
+                                <input type="text" name="email" data-validation="email" data-validation-optional="true">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                Restricted length
+                            </label>
 
-        <div class="controls">
-            <span class="max-chars">100</span> chars left<br/>
-            <textarea class="length-restricted form-control"></textarea>
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <button type="submit" class="btn">Validate</button>
-        </div>
-    </div>
-</form>
+                            <div class="controls">
+                                <span class="max-chars">100</span> chars left<br />
+                                <textarea class="length-restricted form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="btn">Validate</button>
+                            </div>
+                        </div>
+                    </form>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
     <form action="" id="the-form">
         <p>
@@ -950,23 +979,23 @@ $("[name='newsletters[]']:eq(0)")
     $('#my-textarea').restrictLength( $('#max-length-element') );
 &lt;/script&gt;
 ...</pre>
-<p>
-    Read the <a href="#configuration">setup guide</a> if you want to know which
-    configuration options that's available when setting up the validation.
-</p>
-            </div>
-            <div class="page security-validators" id="security-validators">
-                <h1>Security validators</h1>
+                    <p>
+                        Read the <a href="#configuration">setup guide</a> if you want to know which
+                        configuration options that's available when setting up the validation.
+                    </p>
+                </div>
+                <div class="page security-validators" id="security-validators">
+                    <h1>Security validators</h1>
 
-<p>
-    This module contains validators commonly used in registration forms. Here you
-    can try an <a href="#security-form">example form</a> with all the security validators in action.
-</p>
+                    <p>
+                        This module contains validators commonly used in registration forms. Here you
+                        can try an <a href="#security-form">example form</a> with all the security validators in action.
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
-<pre class="prettyprint">
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -975,14 +1004,16 @@ $("[name='newsletters[]']:eq(0)")
     });
 &lt;/script&gt;</pre>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="confirmation:Password confirmation">Password confirmation</h3>
+                    <h3 data-page-section="confirmation:Password confirmation">Password confirmation</h3>
 
-<p>This validator can be used to validate that the values of two inputs are the same. The first input should have a name
-suffixed with <em>_confirmation</em> and the second should have the same name but without the suffix.</p>
+                    <p>This validator can be used to validate that the values of two inputs are the same. The first
+                        input should have a name
+                        suffixed with <em>_confirmation</em> and the second should have the same name but without the
+                        suffix.</p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <p>
     Password (at least 8 characters)
     <input name="pass_confirmation" data-validation="length" data-validation-length="min8">
@@ -992,9 +1023,10 @@ suffixed with <em>_confirmation</em> and the second should have the same name bu
 </p>
 </pre>
 
-<p>As of version 2.2.1 you can use the attribute <code>data-validation-confirm</code> to define which other input that the second input should confirm.</p>
+                    <p>As of version 2.2.1 you can use the attribute <code>data-validation-confirm</code> to define
+                        which other input that the second input should confirm.</p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <p>
     E-mail
     <input name="user-email" data-validation="email" />
@@ -1005,17 +1037,19 @@ suffixed with <em>_confirmation</em> and the second should have the same name bu
 </pre>
 
 
-<h3 data-page-section="strength:Password strength">Password strength</h3>
+                    <h3 data-page-section="strength:Password strength">Password strength</h3>
 
-<p>Use this validator to make sure that your user has a strong enough password. Set attribute <code>data-validation-strength</code>
-    to 1, 2 or 3 depending on how strong password you require.</p>
+                    <p>Use this validator to make sure that your user has a strong enough password. Set attribute
+                        <code>data-validation-strength</code>
+                        to 1, 2 or 3 depending on how strong password you require.</p>
 
-<p>
-    If you want the strength of the password to be displayed while the user types you call <code>displayPasswordStrength()</code>
-    in the end of the form.
-</p>
+                    <p>
+                        If you want the strength of the password to be displayed while the user types you call
+                        <code>displayPasswordStrength()</code>
+                        in the end of the form.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
     <form action="">
         <p>
@@ -1046,32 +1080,35 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="backend: Server-side validation">Validate on server side</h3>
+                    <h3 data-page-section="backend: Server-side validation">Validate on server side</h3>
 
-<p>
-    By using this validator you can validate the value given by the user on the server before the form gets submitted.
-    The validation function will send a POST request to the URL declared in <code>data-validation-url</code>.
-    The argument posted to the URL will have the same name as the input being validated.
-</p>
+                    <p>
+                        By using this validator you can validate the value given by the user on the server before the
+                        form gets submitted.
+                        The validation function will send a POST request to the URL declared in
+                        <code>data-validation-url</code>.
+                        The argument posted to the URL will have the same name as the input being validated.
+                    </p>
 
-<p>
-    The form will get the class <em>validating-server-side</em> while the server is being requested.
-</p>
+                    <p>
+                        The form will get the class <em>validating-server-side</em> while the server is being requested.
+                    </p>
 
-<p>
-    The response from the validation script must be a JSON formatted object, containing the properties &quot;valid&quot;
-    and &quot;message&quot;.
-</p>
+                    <p>
+                        The response from the validation script must be a JSON formatted object, containing the
+                        properties &quot;valid&quot;
+                        and &quot;message&quot;.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 {
     "valid" : true|false,
     "message" : "String with text that should be displayed as error message"
 }</pre>
 
-<div class="pre-title"><strong>Form</strong></div>
+                    <div class="pre-title"><strong>Form</strong></div>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
     <form action="">
         <p>
@@ -1083,9 +1120,9 @@ $.validate({
 </div>
 </pre>
 
-<div class="pre-title"><strong>/validate-input.php</strong></div>
+                    <div class="pre-title"><strong>/validate-input.php</strong></div>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;?php
 $response = array(
     'valid' => false,
@@ -1107,18 +1144,18 @@ if( isset($_POST['user']) ) {
 echo json_encode($response);
 </pre>
 
-<p>
-    <strong>Modifying the server request</strong>
-</p>
+                    <p>
+                        <strong>Modifying the server request</strong>
+                    </p>
 
-<p>
-    The parameter containing the input value, sent to the server, will by default have the same
-    name as the input. You can however set your own parameter name by using the attribute
-    <code>data-validation-param-name</code>. You can also send along other parameters to the server
-    by using the attribute <code>data-validation-req-params</code>.
-</p>
+                    <p>
+                        The parameter containing the input value, sent to the server, will by default have the same
+                        name as the input. You can however set your own parameter name by using the attribute
+                        <code>data-validation-param-name</code>. You can also send along other parameters to the server
+                        by using the attribute <code>data-validation-req-params</code>.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;?php
   $json = json_encode(array('user'=>$user->get('ID')));
 ?&gt;
@@ -1131,11 +1168,12 @@ echo json_encode($response);
 &lt;/p&gt;
 </pre>
 
-<h3 data-page-section="creditcard:Credit card validation">Credit card validation</h3>
+                    <h3 data-page-section="creditcard:Credit card validation">Credit card validation</h3>
 
-<p>This validator makes it possible to validate any of the credit cards VISA, Mastercard, Diners club, Maestro, CJB, Discover and American express</p>
+                    <p>This validator makes it possible to validate any of the credit cards VISA, Mastercard, Diners
+                        club, Maestro, CJB, Discover and American express</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;-- Accept credit card number from Visa, Mastercard and American Express --&gt;
 <div class="convert-code">
 <p>
@@ -1149,10 +1187,11 @@ echo json_encode($response);
 </div>
 </pre>
 
-<p>You can also let the user choose a credit card and programmatically change the allowed credit card
-on the input of the card number.</p>
+                    <p>You can also let the user choose a credit card and programmatically change the allowed credit
+                        card
+                        on the input of the card number.</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
 <p>
     Credit card
@@ -1187,9 +1226,9 @@ $.validate({
 
 </pre>
 
-<h3 data-page-section="spamcheck:Simple captcha">Simple captcha</h3>
+                    <h3 data-page-section="spamcheck:Simple captcha">Simple captcha</h3>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;?php
 session_start();
 if( isset($_POST['captcha']) && isset($_SESSION['captcha'])) {
@@ -1212,11 +1251,11 @@ $_SESSION['captcha'] = array( mt_rand(0,9), mt_rand(1, 9) );
 &lt;/form&gt;
 ...</pre>
 
-<h3 data-page-section="recaptcha:Google reCAPTCHA">Google reCAPTCHA</h3>
+                    <h3 data-page-section="recaptcha:Google reCAPTCHA">Google reCAPTCHA</h3>
 
-<p>Use this validator if wanting to integrate the Google service reCAPTCHA.</p>
+                    <p>Use this validator if wanting to integrate the Google service reCAPTCHA.</p>
 
-<pre class="prettyprint _linenums">
+                    <pre class="prettyprint _linenums">
 <div class="convert-code">
     <p>
         <input  data-validation="recaptcha" data-validation-recaptcha-sitekey="[RECAPTCHA_SITEKEY]">
@@ -1224,23 +1263,26 @@ $_SESSION['captcha'] = array( mt_rand(0,9), mt_rand(1, 9) );
 </div>
 </pre>
 
-<p>
-    You can also use the setup function to configure the recaptcha service.
-</p>
+                    <p>
+                        You can also use the setup function to configure the recaptcha service.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     reCaptchaSiteKey: '...',
     reCaptchaTheme: 'light'
 });
 </pre>
 
-<h3 data-page-section="letternumeric:Letters and numbers">Letters and numbers</h3>
+                    <h3 data-page-section="letternumeric:Letters and numbers">Letters and numbers</h3>
 
-<p>By using the validator <code>letternumeric</code> you can validate that given input value only contains letters
-and/or numbers. This validator allows any type of character in contrast to the <a href="#default-validators_alphanumeric">alphanumeric</a> validator, which only allows letters A-Z.</p>
+                    <p>By using the validator <code>letternumeric</code> you can validate that given input value only
+                        contains letters
+                        and/or numbers. This validator allows any type of character in contrast to the <a
+                            href="#default-validators_alphanumeric">alphanumeric</a> validator, which only allows
+                        letters A-Z.</p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- This input requires an answer that contains only letters and/or numbers -->
 <input type="text" data-validation="letternumeric">
 
@@ -1248,95 +1290,100 @@ and/or numbers. This validator allows any type of character in contrast to the <
 <input type="text" data-validation="alphanumeric" data-validation-allowing="-_">
 </pre>
 
-<hr/>
+                    <hr />
 
-<h2>Example form</h2>
+                    <h2>Example form</h2>
 
-<p>
-    Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form id="security-form" class="form-horizontal well test-form">
-    <div class="control-group">
-        <label class="control-label">User name</label>
+                    <form id="security-form" class="form-horizontal well test-form">
+                        <div class="control-group">
+                            <label class="control-label">User name</label>
 
-        <div class="controls">
-            <input type="text" name="user" data-validation="alphanumeric custom" data-validation-length="3-12"
-                   data-validation-error-msg="Between 3-12 chars, only alphanumeric characters">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Password</label>
-        <div class="controls">
-            <input name="pass_confirmation" type="password" data-validation="strength" data-validation-strength="2"/>
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Confirm password</label>
-        <div class="controls">
-            <input name="pass" data-validation="confirmation" type="password">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Campaign code (validated on server side)</label>
-        <div class="controls">
-            <input type="text" name="code" class="server-validation" data-validation="server"
-                   data-validation-url="validate-email.php"
-                   data-validation-help="Only the word &quot;secret&quot;t is valid">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Credit card</label>
-        <div class="controls">
-            <select name="ccard" id="ccard">
-                <option value="visa">VISA</option>
-                <option value="mastercard">Mastercard</option>
-                <option value="amex">American express</option>
-                <option value="diners_club">Diners club</option>
-                <option value="discover">Discover</option>
-                <option value="cjb">CJB</option>
-                <option value="maestro">Maestro</option>
-            </select>
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Credit card number</label>
-        <div class="controls">
-            <input type="text" name="ccard_num" data-validation="creditcard" data-validation-allowing="visa" />
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">CVV</label>
-        <div class="controls">
-            <input type="text" name="cvv" data-validation="cvv" />
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">What is the sum of 3 + 4</label>
-        <div class="controls">
-            <input name="" type="text" data-validation="spamcheck" data-validation-captcha="7"/>
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Only letters, numbers and spaces allowed</label>
-        <div class="controls">
-            <input name="" type="text" data-validation="letternumeric" data-validation-allowing=" " />
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <button type="submit" class="btn">Validate</button>
-        </div>
-    </div>
-</form>
+                            <div class="controls">
+                                <input type="text" name="user" data-validation="alphanumeric custom"
+                                    data-validation-length="3-12"
+                                    data-validation-error-msg="Between 3-12 chars, only alphanumeric characters">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Password</label>
+                            <div class="controls">
+                                <input name="pass_confirmation" type="password" data-validation="strength"
+                                    data-validation-strength="2" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Confirm password</label>
+                            <div class="controls">
+                                <input name="pass" data-validation="confirmation" type="password">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Campaign code (validated on server side)</label>
+                            <div class="controls">
+                                <input type="text" name="code" class="server-validation" data-validation="server"
+                                    data-validation-url="validate-email.php"
+                                    data-validation-help="Only the word &quot;secret&quot;t is valid">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Credit card</label>
+                            <div class="controls">
+                                <select name="ccard" id="ccard">
+                                    <option value="visa">VISA</option>
+                                    <option value="mastercard">Mastercard</option>
+                                    <option value="amex">American express</option>
+                                    <option value="diners_club">Diners club</option>
+                                    <option value="discover">Discover</option>
+                                    <option value="cjb">CJB</option>
+                                    <option value="maestro">Maestro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Credit card number</label>
+                            <div class="controls">
+                                <input type="text" name="ccard_num" data-validation="creditcard"
+                                    data-validation-allowing="visa" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">CVV</label>
+                            <div class="controls">
+                                <input type="text" name="cvv" data-validation="cvv" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">What is the sum of 3 + 4</label>
+                            <div class="controls">
+                                <input name="" type="text" data-validation="spamcheck" data-validation-captcha="7" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Only letters, numbers and spaces allowed</label>
+                            <div class="controls">
+                                <input name="" type="text" data-validation="letternumeric"
+                                    data-validation-allowing=" " />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="btn">Validate</button>
+                            </div>
+                        </div>
+                    </form>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 &lt;html&gt;
 &lt;head&gt;
 &lt;style type=&quot;text/css&quot;&gt;
     /* Add ajax preloader when server is being requested */
     .validating-server-side {
-        background: url(img/ajax-preloader.gif) no-repeat center right;
+        background: url(static/img/ajax-preloader.gif) no-repeat center right;
         opacity: 0.6
     }
 &lt;/style&gt;
@@ -1412,18 +1459,19 @@ and/or numbers. This validator allows any type of character in contrast to the <
     });
 &lt;/script&gt;
 ...</pre>
-            </div>
-            <div class="page date-validators" id="date-validators">
-                <h1>Date validators</h1>
+                </div>
+                <div class="page date-validators" id="date-validators">
+                    <h1>Date validators</h1>
 
-<p>This module contains validators needed when validating dates and time.
-    Here you can try an <a href="#date-form-example">example form</a> with all the date validators in action.</p>
+                    <p>This module contains validators needed when validating dates and time.
+                        Here you can try an <a href="#date-form-example">example form</a> with all the date validators
+                        in action.</p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1432,14 +1480,15 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="birthdate:Birth date">Birthdate</h3>
+                    <h3 data-page-section="birthdate:Birth date">Birthdate</h3>
 
-<p>This validator is the same as the default <a href="#default-validators_dates">date validator</a> except that it
-    only allows past dates and dates that is not older than 120 years.</p>
+                    <p>This validator is the same as the default <a href="#default-validators_dates">date validator</a>
+                        except that it
+                        only allows past dates and dates that is not older than 120 years.</p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate birth date formatted yyyy-mm-dd -->
 <input type="text" data-validation="birthdate">
 
@@ -1450,48 +1499,49 @@ $.validate({
 <input type="text" data-validation="birthdate" data-validation-format="dd/mm/yyyy">
 </pre>
 
-<h3 data-page-section="time: Time">Time</h3>
+                    <h3 data-page-section="time: Time">Time</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate time formatted HH:mm -->
 <input type="text" data-validation="time">
 </pre>
-<hr/>
+                    <hr />
 
-<h2 id="date-form-example">Example form</h2>
+                    <h2 id="date-form-example">Example form</h2>
 
-<p>
-    Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form action="#" class="form-horizontal well test-form">
+                    <form action="#" class="form-horizontal well test-form">
 
-    <div class="control-group">
-        <label class="control-label">Birthdate</label>
+                        <div class="control-group">
+                            <label class="control-label">Birthdate</label>
 
-        <div class="controls">
-            <input name="user" data-validation="birthdate"
-                   data-validation-help="yyyy-mm-dd (Not allowing dates in the future or older than 120 years)">
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="user" data-validation="birthdate"
+                                    data-validation-help="yyyy-mm-dd (Not allowing dates in the future or older than 120 years)">
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Time</label>
+                        <div class="control-group">
+                            <label class="control-label">Time</label>
 
-        <div class="controls">
-            <input name="" data-validation="time" data-validation-help="HH:mm"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="" data-validation="time" data-validation-help="HH:mm" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" class="btn" value="Validate">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="submit" class="btn" value="Validate">
+                            </div>
+                        </div>
 
-</form>
+                    </form>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
     <form action="" id="date-form">
         <p>
@@ -1516,20 +1566,22 @@ $.validate({
 });
 &lt;/script&gt;
 ...</pre>
-            </div>
-            <div class="page file-validators" id="file-validators">
-                <h1>File validators</h1>
+                </div>
+                <div class="page file-validators" id="file-validators">
+                    <h1>File validators</h1>
 
-<p>
-    This module contains validators needed when validating file uploads. All the validators in this module, except for <code>extension</code>,
-    requires that the browser has implemented the File API (<a href="http://caniuse.com/#feat=fileapi">http://caniuse.com/#feat=fileapi</a>).
-</p>
+                    <p>
+                        This module contains validators needed when validating file uploads. All the validators in this
+                        module, except for <code>extension</code>,
+                        requires that the browser has implemented the File API (<a
+                            href="http://caniuse.com/#feat=fileapi">http://caniuse.com/#feat=fileapi</a>).
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1538,16 +1590,16 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="size:File size">File size</h3>
+                    <h3 data-page-section="size:File size">File size</h3>
 
-<p>
-    This validation is only supported by Internet Explorer 10, Mozilla FireFox v >= 3.6 and any
-    of the later versions of webkit based browsers.
-</p>
+                    <p>
+                        This validation is only supported by Internet Explorer 10, Mozilla FireFox v >= 3.6 and any
+                        of the later versions of webkit based browsers.
+                    </p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate that file isn't larger than 512 kilo bytes -->
 <input type="file" data-validation="size" data-validation-max-size="512kb" />
 
@@ -1555,17 +1607,20 @@ $.validate({
 <input type="file" data-validation="size" data-validation-max-size="3M" />
                 </pre>
 
-<h3 data-page-section="type:File type">File type</h3>
+                    <h3 data-page-section="type:File type">File type</h3>
 
-<p>
-    This validation will fall back on checking the file extension in older browsers. In modern
-    browsers the validation will check that any of the extensions in <code>data-validation-allowing</code>
-    exists in the mime type declaration of the file. This means that <code>data-validation-allowing="pdf"</code>
-    will work in both modern browsers (checking against &quot;application/pdf&quot;) and older browsers (checking
-    the file extension &quot;.pdf&quot;).
-</p>
+                    <p>
+                        This validation will fall back on checking the file extension in older browsers. In modern
+                        browsers the validation will check that any of the extensions in
+                        <code>data-validation-allowing</code>
+                        exists in the mime type declaration of the file. This means that
+                        <code>data-validation-allowing="pdf"</code>
+                        will work in both modern browsers (checking against &quot;application/pdf&quot;) and older
+                        browsers (checking
+                        the file extension &quot;.pdf&quot;).
+                    </p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate that file is an image of type JPG, GIF or PNG and not larger than 2 mega bytes -->
 <input type="file" data-validation="mime size" break0="" data-validation-allowing="jpg, png, gif" break=""
        data-validation-max-size="2M" />
@@ -1574,9 +1629,9 @@ $.validate({
 <input type="file" data-validation="required extension" data-validation-allowing="txt" />
 </pre>
 
-<p>Validating multiple files (with separate error messages depending on failed validation):</p>
+                    <p>Validating multiple files (with separate error messages depending on failed validation):</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;input type="file" multiple="multiple" name="images"
     data-validation="length mime size"
     data-validation-length="min2"
@@ -1588,15 +1643,15 @@ $.validate({
     /&gt;
 </pre>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="dimension:Image dimension and ratio">Image dimension and ratio</h3>
+                    <h3 data-page-section="dimension:Image dimension and ratio">Image dimension and ratio</h3>
 
-<p>
-    Use the validator <code>dimension</code> to check the dimension of an image (jpg, gif or png).
-</p>
+                    <p>
+                        Use the validator <code>dimension</code> to check the dimension of an image (jpg, gif or png).
+                    </p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate that the image is no smaller than 100x100px -->
 <input data-validation="dimension mime" data-validation-allowing="jpg" break="" data-validation-dimension="min100" />
 
@@ -1613,9 +1668,10 @@ $.validate({
 <input data-validation="dimension mime" data-validation-allowing="jpg" break="" data-validation-dimension="200x400-600x1200" />
 </pre>
 
-<p>Use the attribute <code>data-validation-ratio</code> to validate that the uploaded image has a certain ratio</p>
+                    <p>Use the attribute <code>data-validation-ratio</code> to validate that the uploaded image has a
+                        certain ratio</p>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 
 <!-- Validate that only square images gets uploaded -->
 <input data-validation="ratio mime" data-validation-allowing="jpg, png, gif" break="" data-validation-dimension="min100" data-validation-ratio="1:1" />
@@ -1624,20 +1680,21 @@ $.validate({
 <input data-validation="ratio mime" data-validation-allowing="jpg" break="" data-validation-dimension="min100" data-validation-ratio="8:10-12:10" />
 
 </pre>
-            </div>
-            <div class="page location-validators" id="location-validators">
-                <h1>Location validators</h1>
+                </div>
+                <div class="page location-validators" id="location-validators">
+                    <h1>Location validators</h1>
 
-<p>
-    This module contains validators needed when validating geographical data.
-    Here you can try an <a href="#localization-demo">example form</a> with all the location validators in action.
-</p>
+                    <p>
+                        This module contains validators needed when validating geographical data.
+                        Here you can try an <a href="#localization-demo">example form</a> with all the location
+                        validators in action.
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1646,35 +1703,35 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="country:Country">Country</h3>
+                    <h3 data-page-section="country:Country">Country</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate country (english only) -->
 <input type="text" data-validation="country"/>
                 </pre>
 
-<h3 data-page-section="state:US State">State (US)</h3>
+                    <h3 data-page-section="state:US State">State (US)</h3>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate US state (english only) -->
 <input type="text" data-validation="federatestate"/>
                 </pre>
 
-<h3 data-page-section="longlat:Longitude and latitude">Longitude, Latitude</h3>
+                    <h3 data-page-section="longlat:Longitude and latitude">Longitude, Latitude</h3>
 
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
 <!-- Validate longitude and latitude (eg 40.714623,-74.006605) -->
 <input type="text" data-validation="longlat"/>
                 </pre>
 
-<h3 data-page-section="suggestions:Suggest country/state">Suggest country/state</h3>
+                    <h3 data-page-section="suggestions:Suggest country/state">Suggest country/state</h3>
 
-<p>By using this function you'll make it easier for your visitor to input a country or state.</p>
+                    <p>By using this function you'll make it easier for your visitor to input a country or state.</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
     <form action="">
         ...
@@ -1701,49 +1758,50 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<hr/>
+                    <hr />
 
-<h2 id="localization-demo">Example form</h2>
+                    <h2 id="localization-demo">Example form</h2>
 
-<p>
-    Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form action="" class="test-form well form-horizontal" id="location-form">
+                    <form action="" class="test-form well form-horizontal" id="location-form">
 
-    <div class="control-group">
-        <label class="control-label">Country</label>
+                        <div class="control-group">
+                            <label class="control-label">Country</label>
 
-        <div class="controls">
-            <input name="country" data-validation="country"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="country" data-validation="country" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">State (US)</label>
+                        <div class="control-group">
+                            <label class="control-label">State (US)</label>
 
-        <div class="controls">
-            <input name="state" data-validation="federatestate"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="state" data-validation="federatestate" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Longitude, Latitude</label>
+                        <div class="control-group">
+                            <label class="control-label">Longitude, Latitude</label>
 
-        <div class="controls">
-            <input name="longlat" data-validation="longlat"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="longlat" data-validation="longlat" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" class="btn" value="Validate"/>
-        </div>
-    </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="submit" class="btn" value="Validate" />
+                            </div>
+                        </div>
 
-</form>
+                    </form>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
     <form action="" id="dates-form">
         <p>
@@ -1775,27 +1833,27 @@ $.validate({
 });
 &lt;/script&gt;
 ...</pre>
-            </div>
-            <div class="page country-specific-validators" id="country-specific-validators">
-                <h1>Country specific validators</h1>
+                </div>
+                <div class="page country-specific-validators" id="country-specific-validators">
+                    <h1>Country specific validators</h1>
 
-<p>
-Here you can read about the different modules that targets validation rules
-commonly used in certain countries. 
-</p>
+                    <p>
+                        Here you can read about the different modules that targets validation rules
+                        commonly used in certain countries.
+                    </p>
 
-<hr/>
-
-
-<h3 data-page-section="brazil:Brazil">Brazil validators</h3>
+                    <hr />
 
 
-<p>This module contains validators that comes in handy on brazilian websites.</p>
+                    <h3 data-page-section="brazil:Brazil">Brazil validators</h3>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
-<pre class="prettyprint">
+
+                    <p>This module contains validators that comes in handy on brazilian websites.</p>
+
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1806,35 +1864,35 @@ commonly used in certain countries.
 
 
 
-<h4 data-label-section="vat:Brazilian Telephone Number">Brazilian telephone number</h4>
+                    <h4 data-label-section="vat:Brazilian Telephone Number">Brazilian telephone number</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="brphone">
 </pre>
 
 
-<h4 data-label-section="vat:Brazilian Postal Code">Brazilian Postal Code</h4>
+                    <h4 data-label-section="vat:Brazilian Postal Code">Brazilian Postal Code</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="cep">
 </pre>
 
 
-<h4 data-label-section="vat:CPF">Brazilian individual taxpayer registry identification</h4>
+                    <h4 data-label-section="vat:CPF">Brazilian individual taxpayer registry identification</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="cpf">
 </pre>
 
-<h3 data-page-section="poland:Poland">Poland</h3>
+                    <h3 data-page-section="poland:Poland">Poland</h3>
 
 
-<p>This module contains validators that comes in handy on Polish websites.</p>
+                    <p>This module contains validators that comes in handy on Polish websites.</p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
-<pre class="prettyprint">
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1845,38 +1903,39 @@ commonly used in certain countries.
 
 
 
-<h4>Polish personal identity number</h4>
+                    <h4>Polish personal identity number</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="plpesel">
 </pre>
 
 
-<h4>Polish business identity number</h4>
+                    <h4>Polish business identity number</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="plregon">
 </pre>
 
-<h4>VAT</h4>
+                    <h4>VAT</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="plnip">
 </pre>
 
 
-<h3 data-page-section="sweden:Sweden">Swedish validators</h3>
+                    <h3 data-page-section="sweden:Sweden">Swedish validators</h3>
 
-<p>
-    This module contains validators that comes in handy on Swedish websites.
-    Here you can try an <a href="#swedish-example">example form</a> with all the Swedish validators in action.
-</p>
+                    <p>
+                        This module contains validators that comes in handy on Swedish websites.
+                        Here you can try an <a href="#swedish-example">example form</a> with all the Swedish validators
+                        in action.
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1885,11 +1944,11 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<hr/>
+                    <hr />
 
-<h4 data-label-section="phone:Phone number">Validate phone number</h4>
+                    <h4 data-label-section="phone:Phone number">Validate phone number</h4>
 
-<pre class="convert-code prettyprint">
+                    <pre class="convert-code prettyprint">
 <!-- Validate a local telephone number in Sweden -->
 <input type="text" data-validation="swephone"/>
 
@@ -1897,9 +1956,9 @@ $.validate({
 <input type="text" data-validation="swemobile"/>
                 </pre>
 
-<h4 data-label-section="ssn:Social security number">Validate social security number</h4>
+                    <h4 data-label-section="ssn:Social security number">Validate social security number</h4>
 
-<pre class="convert-code prettyprint">
+                    <pre class="convert-code prettyprint">
 <!-- Social security number YYYYMMDDXXYY -->
 <input type="text" data-validation="swesec"/>
 
@@ -1907,10 +1966,11 @@ $.validate({
 <input type="text" data-validation="swesec" data-validation-use-hyphen="true" />
                 </pre>
 
-<p>
-    It's also possible to validate that the user has entered a valid gender based on the social security number.
-</p>
-<pre class="prettyprint"><div class="convert-code">
+                    <p>
+                        It's also possible to validate that the user has entered a valid gender based on the social
+                        security number.
+                    </p>
+                    <pre class="prettyprint"><div class="convert-code">
     <form action="/registration" method="POST">
         <p>
             <strong>Gender:</strong>
@@ -1947,25 +2007,26 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<h4 data-label-section="muni:Municipality (kommun)">Validate municipality (kommun)</h4>
+                    <h4 data-label-section="muni:Municipality (kommun)">Validate municipality (kommun)</h4>
 
-<pre class="convert-code prettyprint">
+                    <pre class="convert-code prettyprint">
     <input type="text" data-validation="swemunicipality"/>
 </pre>
 
 
-<h4 data-label-section="county:County (l&auml;n)">Validate county (län)</h4>
+                    <h4 data-label-section="county:County (l&auml;n)">Validate county (län)</h4>
 
-<pre class="convert-code prettyprint">
+                    <pre class="convert-code prettyprint">
     <input type="text" data-validation="swecounty"/>
 </pre>
 
 
-<h4 data-label-section="swesuggestions:Suggest county/municipality">Suggest kommun/län</h4>
+                    <h4 data-label-section="swesuggestions:Suggest county/municipality">Suggest kommun/län</h4>
 
-<p>By using these functions you'll make it easier for your visitors to input a Swedish county or municipality.</p>
+                    <p>By using these functions you'll make it easier for your visitors to input a Swedish county or
+                        municipality.</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
     <form action="">
         ...
@@ -1992,65 +2053,66 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<hr />
+                    <hr />
 
-<h2 id="swedish-example">Example form</h2>
+                    <h2 id="swedish-example">Example form</h2>
 
-<p>
-    Here you can read more about <a href="#configuration_styling">styling</a> of the form and error dialogs.
-</p>
+                    <p>
+                        Here you can read more about <a href="#configuration_styling">styling</a> of the form and error
+                        dialogs.
+                    </p>
 
-<form id="swedish-form" action="#" class="form-horizontal well test-form">
+                    <form id="swedish-form" action="#" class="form-horizontal well test-form">
 
-    <div class="control-group">
-        <label class="control-label">Phone number</label>
+                        <div class="control-group">
+                            <label class="control-label">Phone number</label>
 
-        <div class="controls">
-            <input name="user" data-validation="swephone">
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="user" data-validation="swephone">
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Mobile phone</label>
+                        <div class="control-group">
+                            <label class="control-label">Mobile phone</label>
 
-        <div class="controls">
-            <input name="" data-validation="swemobile"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="" data-validation="swemobile" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Social security number</label>
+                        <div class="control-group">
+                            <label class="control-label">Social security number</label>
 
-        <div class="controls">
-            <input name="" data-validation="swesec" data-validation-help="yyyymmddXXYY"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="" data-validation="swesec" data-validation-help="yyyymmddXXYY" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Län</label>
+                        <div class="control-group">
+                            <label class="control-label">Län</label>
 
-        <div class="controls">
-            <input name="lan" data-validation="swecounty"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="lan" data-validation="swecounty" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Kommun</label>
+                        <div class="control-group">
+                            <label class="control-label">Kommun</label>
 
-        <div class="controls">
-            <input name="kommun" data-validation="swemunicipality"/>
-        </div>
-    </div>
+                            <div class="controls">
+                                <input name="kommun" data-validation="swemunicipality" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" class="btn" value="Validate">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="submit" class="btn" value="Validate">
+                            </div>
+                        </div>
 
-</form>
+                    </form>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
     <form action="" id="swe-form">
         <p>
@@ -2091,17 +2153,17 @@ $.validate({
 &lt;/script&gt;
 ...</pre>
 
-<hr />
+                    <hr />
 
-<h3 data-page-section="uk:United Kingdom">UK validators</h3>
+                    <h3 data-page-section="uk:United Kingdom">UK validators</h3>
 
 
-<p>This module contains validators that comes in handy on british websites.</p>
+                    <p>This module contains validators that comes in handy on british websites.</p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
-<pre class="prettyprint">
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -2111,38 +2173,38 @@ $.validate({
 &lt;/script&gt;</pre>
 
 
-<h4 data-label-section="vat:VAT number">National Insurance number</h4>
+                    <h4 data-label-section="vat:VAT number">National Insurance number</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="uknin">
 </pre>
 
 
-<h4 data-label-section="vat:VAT number">VAT</h4>
+                    <h4 data-label-section="vat:VAT number">VAT</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="ukvatnumber">
 </pre>
 
 
-<h4 data-label-section="vat:VAT number">Unique Taxpayer Reference Number</h4>
+                    <h4 data-label-section="vat:VAT number">Unique Taxpayer Reference Number</h4>
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="ukutr">
 </pre>
-            </div>
-            <div class="page data-sanitation" id="data-sanitation">
-                <h1>Data Sanitation</h1>
+                </div>
+                <div class="page data-sanitation" id="data-sanitation">
+                    <h1>Data Sanitation</h1>
 
-<p>
-    This module can be used to automatically sanitize input values.
-</p>
+                    <p>
+                        This module can be used to automatically sanitize input values.
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -2151,28 +2213,34 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="sanitize_options:Sanitation options">Sanitation options</h3>
+                    <h3 data-page-section="sanitize_options:Sanitation options">Sanitation options</h3>
 
-<p>
-	By using the module sanitize you will be able to declare sanitation functions that will be triggered when inputs looses focus. You declare them using the attribute data-sanitize. The implemented rules are:
-</p>	
+                    <p>
+                        By using the module sanitize you will be able to declare sanitation functions that will be
+                        triggered when inputs looses focus. You declare them using the attribute data-sanitize. The
+                        implemented rules are:
+                    </p>
 
-<ul>
-	<li>trim</li>
-	<li>trimLeft</li>
-	<li>trimRight</li>
-	<li>upper (convert all letters to upper case)</li>
-	<li>lower (convert all letters to lower case)</li>
-	<li>capitalize (convert the first letter in all words to upper case)</li>
-	<li>insertRight (declare a text that should be inserted at the end of the value, attribute <code>data-sanitize-insert-right</code>)</li>
-	<li>insertLeft (declare a text that should be inserted at the beginning of the value, attribute <code>data-sanitize-insert-left</code>)</li>
-	<li>strip (comma separated list with words that gets automatically removed)</li>
-    <li>escape (convert &lt; &gt; &amp; ' " to html entities)</li>
-	<li>numberFormat (declare the attribute <code>data-sanitize-number-format</code> with any of the formats described on <a href="http://numeraljs.com/">http://numeraljs.com/</a>. Note that this rule requires that numeral.js is included in the page)</li>
-</ul>
+                    <ul>
+                        <li>trim</li>
+                        <li>trimLeft</li>
+                        <li>trimRight</li>
+                        <li>upper (convert all letters to upper case)</li>
+                        <li>lower (convert all letters to lower case)</li>
+                        <li>capitalize (convert the first letter in all words to upper case)</li>
+                        <li>insertRight (declare a text that should be inserted at the end of the value, attribute
+                            <code>data-sanitize-insert-right</code>)</li>
+                        <li>insertLeft (declare a text that should be inserted at the beginning of the value, attribute
+                            <code>data-sanitize-insert-left</code>)</li>
+                        <li>strip (comma separated list with words that gets automatically removed)</li>
+                        <li>escape (convert &lt; &gt; &amp; ' " to html entities)</li>
+                        <li>numberFormat (declare the attribute <code>data-sanitize-number-format</code> with any of the
+                            formats described on <a href="http://numeraljs.com/">http://numeraljs.com/</a>. Note that
+                            this rule requires that numeral.js is included in the page)</li>
+                    </ul>
 
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
 <form action="" id="registration-form">
   <p>
@@ -2184,7 +2252,7 @@ $.validate({
     Amount:
     <input name="amount" data-sanitize="insertRight"
     	break="" data-sanitize-insert-right=" $" />
-  </p>	
+  </p>
 </form>
 </div>
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
@@ -2196,12 +2264,13 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<h3 data-page-section="numberformat:Number formatting">Number formatting</h3>
+                    <h3 data-page-section="numberformat:Number formatting">Number formatting</h3>
 
-<p>By using this module together with <code>numeraljs</code> you can automatically format
-	numbers in any way you want. Read more about how to declare number formats over at <a href="http://numeraljs.com">numeraljs.com</a></p>
+                    <p>By using this module together with <code>numeraljs</code> you can automatically format
+                        numbers in any way you want. Read more about how to declare number formats over at <a
+                            href="http://numeraljs.com">numeraljs.com</a></p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 <div class="convert-code">
 <form action="" id="registration-form">
     <p>
@@ -2221,19 +2290,19 @@ $.validate({
     });
 &lt;/script&gt;
 </pre>
-            </div>
-            <div class="page logic" id="logic">
-                <h1>Logic</h1>
+                </div>
+                <div class="page logic" id="logic">
+                    <h1>Logic</h1>
 
-<p>
-    This module is used when wanting to combine validators in a complex manner.
-</p>
+                    <p>
+                        This module is used when wanting to combine validators in a complex manner.
+                    </p>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -2242,14 +2311,14 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="depending:Dependent validation">Validators depending on each other</h3>
+                    <h3 data-page-section="depending:Dependent validation">Validators depending on each other</h3>
 
-<p>
-    Use the attributes <code>data-validation-depends-on</code> to configure that an input
-    is optional as long as another input is left without an answer.
+                    <p>
+                        Use the attributes <code>data-validation-depends-on</code> to configure that an input
+                        is optional as long as another input is left without an answer.
 
 
-<pre class="prettyprint">
+                        <pre class="prettyprint">
 <div class="convert-code">
 <!-- Require e-mail only if checkbox is checked -->
 <p>
@@ -2267,7 +2336,7 @@ $.validate({
 </div>
 </pre>
 
-<pre class="prettyprint">
+                        <pre class="prettyprint">
 <div class="convert-code">
 <!-- Require a state to be given if the user comes from either USA or Canada -->
 <p>
@@ -2303,12 +2372,14 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<h3 data-page-section="oneof:Require &quot;one-of&quot;">Require only one out of several inputs</h3>
+                        <h3 data-page-section="oneof:Require &quot;one-of&quot;">Require only one out of several inputs
+                        </h3>
 
-<p>Use the attribute <code>data-validation-optional-if-answered</code> to tell the validator that only one, out of a
-group of inputs, requires an answer.</p>
+                        <p>Use the attribute <code>data-validation-optional-if-answered</code> to tell the validator
+                            that only one, out of a
+                            group of inputs, requires an answer.</p>
 
-<pre class="prettyprint">
+                        <pre class="prettyprint">
 <div class="convert-code">
 <p>
     <strong>Home phone number:</strong>
@@ -2330,15 +2401,15 @@ group of inputs, requires an answer.</p>
 </p>
 </div>
 </pre>
-            </div>
-            <div class="page sepa" id="sepa">
-                <h1>Sepa (iban/bic)</h1>
+                </div>
+                <div class="page sepa" id="sepa">
+                    <h1>Sepa (iban/bic)</h1>
 
-<p>
-    <em>The following code shows you how to load the module.</em>
-</p>
+                    <p>
+                        <em>The following code shows you how to load the module.</em>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -2347,108 +2418,128 @@ $.validate({
 });
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="iban:IBAN">IBAN</h3>
+                    <h3 data-page-section="iban:IBAN">IBAN</h3>
 
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="iban">
 </pre>
 
-<h3 data-page-section="bic:BIC">BIC</h3>
+                    <h3 data-page-section="bic:BIC">BIC</h3>
 
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="bic">
 </pre>
 
-<h3 data-page-section="sepa:Sepa">Sepa</h3>
+                    <h3 data-page-section="sepa:Sepa">Sepa</h3>
 
 
-<pre class="prettyprint convert-code">
+                    <pre class="prettyprint convert-code">
     <input type="text" data-validation="sepa">
 </pre>
-            </div>
-            <div class="page configuration" id="configuration">
-                <h1>Setup and configuration</h1>
+                </div>
+                <div class="page configuration" id="configuration">
+                    <h1>Setup and configuration</h1>
 
-<p>In this section we will go through the different configuration options
-    you can use<br/>when setting up the validation.</p>
-<ul>
-    <li>Read more about
-        <a href="#localization">localization</a>.
-    </li>
-    <li>Read more about giving <a href="#default-validators_suggest">input suggestions</a>.</li>
-    <li>Read more about making <a href="#default-validators_optional">validation optional.</a></li>
-    <li>Read more about showing <a href="#default-validators_help">help information</a>.</li>
-</ul>
+                    <p>In this section we will go through the different configuration options
+                        you can use<br />when setting up the validation.</p>
+                    <ul>
+                        <li>Read more about
+                            <a href="#localization">localization</a>.
+                        </li>
+                        <li>Read more about giving <a href="#default-validators_suggest">input suggestions</a>.</li>
+                        <li>Read more about making <a href="#default-validators_optional">validation optional.</a></li>
+                        <li>Read more about showing <a href="#default-validators_help">help information</a>.</li>
+                    </ul>
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="setup:Setup">Setup</h3>
+                    <h3 data-page-section="setup:Setup">Setup</h3>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 // Setup form validation on all forms
 $.validate();
-</pre><pre class="prettyprint">
+</pre>
+                    <pre class="prettyprint">
 // Setup form validation only on the form having id "registration"
 $.validate({
     form : '#registration'
 });
-</pre><pre class="prettyprint">
+</pre>
+                    <pre class="prettyprint">
 // Setup form validation on the forms that has id #registration and #login
 $.validate({
     form : '#registration, #login'
 });</pre>
 
-<p>
-    If wanting to refresh the validation setup all you have to do is to call <code>$.validate()</code>
-    once more. To remove error messages and error styling you must call the native function <code>reset()</code>
-    on the form element.
-</p>
+                    <p>
+                        If wanting to refresh the validation setup all you have to do is to call
+                        <code>$.validate()</code>
+                        once more. To remove error messages and error styling you must call the native function
+                        <code>reset()</code>
+                        on the form element.
+                    </p>
 
 
-<pre class="prettyprint">&lt;script&gt;
+                    <pre class="prettyprint">&lt;script&gt;
 // Reset form using jQuery
 $('#container form').get(0).reset();
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="options:Configuration options">Configuration options</h3>
+                    <h3 data-page-section="options:Configuration options">Configuration options</h3>
 
-<ul>
-    <li><strong>ignore</strong> <em>[ ]</em> &ndash; Array with name of inputs that shouldn't become validated.</li>
-        <li><strong>errorElementClass</strong> <em>'error'</em> &ndash; Class that will be applied on elements which value is invalid.</li>
-        <li><strong>borderColorOnError</strong> <em>'#b94a48'</em> &ndash; Border color on inputs which value is invalid (empty string to prevent the change of border color).</li>
-        <li><strong>errorMessageClass</strong> <em>'form-error'</em> &ndash; Class name of div containing all error messages when validation fails. This option is only relevant when having configuration option <code>errorMessagePosition</code> set to <code>top</code></li>
-        <li><strong>validationRuleAttribute</strong> <em>'data-validation'</em> &ndash;  name of the attribute holding the validation rules</li>
-        <li><strong>validationErrorMsgAttribute</strong> <em>'data-validation-error-msg'</em> &ndash;  define custom err msg inline with element</li>
-        <li><strong>errorMessagePosition</strong> <em>'element'</em> &ndash;  Can be either "top" or "inline"</li>
-        <li><strong>scrollToTopOnError</strong> <em>true</em></li>
-        <li><strong>dateFormat</strong> <em>'yyyy-mm-dd'</em></li>
-        <li><strong>addValidClassOnAll</strong> <em>false</em> &ndash;  whether or not to apply class="valid" even if the input wasn't validated</li>
-        <li><strong>decimalSeparator</strong> <em>'.'</em></li>
-        <li><strong>inputParentClassOnError</strong> <em>'has-error'</em> &ndash;  twitter-bootstrap default class name</li>
-        <li><strong>inputParentClassOnSuccess</strong> <em>'has-success'</em> &ndash;  twitter-bootstrap default class name</li>
-        <li><strong>validateHiddenInputs</strong> <em>false</em> &ndash;  whether or not hidden inputs should be validated</li>
-        <li><strong>inlineErrorMessageCallback</strong> <em>null</em> &ndash;  whether or not hidden inputs should be validated</li>
-        <li><strong>submitErrorMessageCallback</strong> <em>null</em> &ndash;  whether or not hidden inputs should be validated</li>
-</ul>
+                    <ul>
+                        <li><strong>ignore</strong> <em>[ ]</em> &ndash; Array with name of inputs that shouldn't become
+                            validated.</li>
+                        <li><strong>errorElementClass</strong> <em>'error'</em> &ndash; Class that will be applied on
+                            elements which value is invalid.</li>
+                        <li><strong>borderColorOnError</strong> <em>'#b94a48'</em> &ndash; Border color on inputs which
+                            value is invalid (empty string to prevent the change of border color).</li>
+                        <li><strong>errorMessageClass</strong> <em>'form-error'</em> &ndash; Class name of div
+                            containing all error messages when validation fails. This option is only relevant when
+                            having configuration option <code>errorMessagePosition</code> set to <code>top</code></li>
+                        <li><strong>validationRuleAttribute</strong> <em>'data-validation'</em> &ndash; name of the
+                            attribute holding the validation rules</li>
+                        <li><strong>validationErrorMsgAttribute</strong> <em>'data-validation-error-msg'</em> &ndash;
+                            define custom err msg inline with element</li>
+                        <li><strong>errorMessagePosition</strong> <em>'element'</em> &ndash; Can be either "top" or
+                            "inline"</li>
+                        <li><strong>scrollToTopOnError</strong> <em>true</em></li>
+                        <li><strong>dateFormat</strong> <em>'yyyy-mm-dd'</em></li>
+                        <li><strong>addValidClassOnAll</strong> <em>false</em> &ndash; whether or not to apply
+                            class="valid" even if the input wasn't validated</li>
+                        <li><strong>decimalSeparator</strong> <em>'.'</em></li>
+                        <li><strong>inputParentClassOnError</strong> <em>'has-error'</em> &ndash; twitter-bootstrap
+                            default class name</li>
+                        <li><strong>inputParentClassOnSuccess</strong> <em>'has-success'</em> &ndash; twitter-bootstrap
+                            default class name</li>
+                        <li><strong>validateHiddenInputs</strong> <em>false</em> &ndash; whether or not hidden inputs
+                            should be validated</li>
+                        <li><strong>inlineErrorMessageCallback</strong> <em>null</em> &ndash; whether or not hidden
+                            inputs should be validated</li>
+                        <li><strong>submitErrorMessageCallback</strong> <em>null</em> &ndash; whether or not hidden
+                            inputs should be validated</li>
+                    </ul>
 
-<hr />
+                    <hr />
 
-<h3 data-page-section="modules:Loading modules">Loading modules</h3>
+                    <h3 data-page-section="modules:Loading modules">Loading modules</h3>
 
-<p>
-    Use the property <code>modules</code> to declare which modules you want to load. The property should contain a
-    comma separated string with module names.
-</p>
+                    <p>
+                        Use the property <code>modules</code> to declare which modules you want to load. The property
+                        should contain a
+                        comma separated string with module names.
+                    </p>
 
-<p>
-    Use the property <code>onModulesLoaded</code> to declare a function that should be called after that the modules
-    has
-    loaded.
-</p>
+                    <p>
+                        Use the property <code>onModulesLoaded</code> to declare a function that should be called after
+                        that the modules
+                        has
+                        loaded.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     modules : 'date, security',
     onModulesLoaded : function() {
@@ -2457,43 +2548,54 @@ $.validate({
 });
 </pre>
 
-<p>
-    Here you can read more about how to <a href="#custom-validators">create your own modules</a>.
-</p>
+                    <p>
+                        Here you can read more about how to <a href="#custom-validators">create your own modules</a>.
+                    </p>
 
-<h3 data-page-section="callbacks:Validation callbacks">Validation callbacks</h3>
+                    <h3 data-page-section="callbacks:Validation callbacks">Validation callbacks</h3>
 
-<p>
-    There are four different callbacks you can declare when setting up the validation. There are also
-    two types of events triggered on elements when they get validated.
-</p>
+                    <p>
+                        There are four different callbacks you can declare when setting up the validation. There are
+                        also
+                        two types of events triggered on elements when they get validated.
+                    </p>
 
-<ul>
-    <li>
-        <strong>onError</strong> &ndash; Called when the user submits the form and one or more inputs has an invalid value.
-    </li>
-    <li>
-        <strong>onSuccess</strong> &ndash; Called when the user submits the form and no input with an invalid value can be found.
-    </li>
-    <li>
-        <strong>onValidate</strong> &ndash; Called when the user submits the form and all inputs
-        have become validated. This callback is called before onError/onSuccess. You can add error messages from this callback
-        by returning an object containing the property &quot;element&quot; (referring to the input element having an invalid value)
-        and &quot;message&quot;. You can also return an array with error objects if you want to add several error messages.
-        The validation procedure will go on as normally if the callback function doesn't return anything.
-    </li>
-    <li>
-        <strong>onElementValidate</strong> &ndash; Called after that an element have become validated.
-    </li>
-    <li>
-        <strong>beforeValidation</strong> &ndash; jQuery event triggered on elements right before they become validated.
-        Use this event if you want to prevent validation in runtime by setting <code>data-validation-skipped="1"</code>.
-    </li>
-    <li>
-        <strong>validation</strong> &ndash; jQuery event triggered on elements after they have been validated.
-    </li>
-</ul>
-<pre class="prettyprint">
+                    <ul>
+                        <li>
+                            <strong>onError</strong> &ndash; Called when the user submits the form and one or more
+                            inputs has an invalid value.
+                        </li>
+                        <li>
+                            <strong>onSuccess</strong> &ndash; Called when the user submits the form and no input with
+                            an invalid value can be found.
+                        </li>
+                        <li>
+                            <strong>onValidate</strong> &ndash; Called when the user submits the form and all inputs
+                            have become validated. This callback is called before onError/onSuccess. You can add error
+                            messages from this callback
+                            by returning an object containing the property &quot;element&quot; (referring to the input
+                            element having an invalid value)
+                            and &quot;message&quot;. You can also return an array with error objects if you want to add
+                            several error messages.
+                            The validation procedure will go on as normally if the callback function doesn't return
+                            anything.
+                        </li>
+                        <li>
+                            <strong>onElementValidate</strong> &ndash; Called after that an element have become
+                            validated.
+                        </li>
+                        <li>
+                            <strong>beforeValidation</strong> &ndash; jQuery event triggered on elements right before
+                            they become validated.
+                            Use this event if you want to prevent validation in runtime by setting
+                            <code>data-validation-skipped="1"</code>.
+                        </li>
+                        <li>
+                            <strong>validation</strong> &ndash; jQuery event triggered on elements after they have been
+                            validated.
+                        </li>
+                    </ul>
+                    <pre class="prettyprint">
     $.validate({
         form : '#registration-form',
         modules : 'security',
@@ -2526,43 +2628,52 @@ $.validate({
         });
 </pre>
 
-<h3 data-page-section="styling:Styling">Styling</h3>
+                    <h3 data-page-section="styling:Styling">Styling</h3>
 
-<p>
-    <em>This plugin is compatible with <strong>twitter bootstrap 3.x</strong> out of the box. The classes mentioned below is in
-        addition to classes used by twitter bootstrap.</em>
-</p>
+                    <p>
+                        <em>This plugin is compatible with <strong>twitter bootstrap 3.x</strong> out of the box. The
+                            classes mentioned below is in
+                            addition to classes used by twitter bootstrap.</em>
+                    </p>
 
-<p>An input that has a valid value will get the class <code>valid</code>, if the value is invalid the input will get
-    the class <code>error</code>. The error messages is placed in a span element with the class <code>form-error</code>.
-    Both of these class names can be configured using the properties <code>errorElementClass</code> and <code>errorMessageClass</code>.
-</p>
+                    <p>An input that has a valid value will get the class <code>valid</code>, if the value is invalid
+                        the input will get
+                        the class <code>error</code>. The error messages is placed in a span element with the class
+                        <code>form-error</code>.
+                        Both of these class names can be configured using the properties <code>errorElementClass</code>
+                        and <code>errorMessageClass</code>.
+                    </p>
 
-<p>
-    An input with an invalid value will automatically get a red border color. You can use the setup function if you
-    want to change the border color to something else, set the property to an empty string if you don't want the
-    border color to change when the input has an invalid value.
-</p>
+                    <p>
+                        An input with an invalid value will automatically get a red border color. You can use the setup
+                        function if you
+                        want to change the border color to something else, set the property to an empty string if you
+                        don't want the
+                        border color to change when the input has an invalid value.
+                    </p>
 
-<p>
-    The <code>valid</code> class will only be applied on inputs that is validated. Set the configuration option
-    <code>addValidClassOnAll</code> to true if you also want the inputs not having any validation rules to get
-    the class <code>valid</code> when the form gets submitted.
-</p>
+                    <p>
+                        The <code>valid</code> class will only be applied on inputs that is validated. Set the
+                        configuration option
+                        <code>addValidClassOnAll</code> to true if you also want the inputs not having any validation
+                        rules to get
+                        the class <code>valid</code> when the form gets submitted.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     borderColorOnError : '#FFF',
     addValidClassOnAll : true
 });</pre>
 
-<p>
-    A typical markup for a form using twitter bootstrap has each input in a div element with the class
-    <code>form-group</code> and a label element with the class <code>control-label</code> containing
-    the description of the input. The input element should have the class <code>form-control</code>.
-</p>
+                    <p>
+                        A typical markup for a form using twitter bootstrap has each input in a div element with the
+                        class
+                        <code>form-group</code> and a label element with the class <code>control-label</code> containing
+                        the description of the input. The input element should have the class <code>form-control</code>.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;form action=&quot;...&quot; role=&quot;form&quot;&gt;
     &lt;div class=&quot;form-group&quot;&gt;
         &lt;label class=&quot;control-label&quot; for=&quot;the-input&quot;&gt;Input description&lt;/label&gt;
@@ -2571,39 +2682,45 @@ $.validate({
     ...
 </pre>
 
-<h3 data-page-section="theme:Default theme">Default theme</h3>
+                    <h3 data-page-section="theme:Default theme">Default theme</h3>
 
-<p>You can use the default CSS-theme if you want the styling of the validation elements (error dialogs, icons etc) to look exactly as
-they do here on formvalidator.net. Add the following stylesheet declaration in the header of your document.</p>
+                    <p>You can use the default CSS-theme if you want the styling of the validation elements (error
+                        dialogs, icons etc) to look exactly as
+                        they do here on formvalidator.net. Add the following stylesheet declaration in the header of
+                        your document.</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;link href=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css&quot;
         rel=&quot;stylesheet&quot; type=&quot;text/css&quot; />
 </pre>
 
 
-<h3 data-page-section="disable:Disabling features">Disabling features</h3>
+                    <h3 data-page-section="disable:Disabling features">Disabling features</h3>
 
-<p>
-    You can disable some of the features of this plugin by using the following configuration options.
-</p>
+                    <p>
+                        You can disable some of the features of this plugin by using the following configuration
+                        options.
+                    </p>
 
-<ul>
-    <li>
-        <strong>validateOnBlur</strong> &ndash; Set this property to false if you only want the form to become
-        validated when the user clicks on the submit button.
-    </li>
-    <li>
-        <strong>showHelpOnFocus</strong> &ndash; Set this property to false if you don't want the plugin
-        to search through the form for <a href="#default-validators_help">help information</a>.
-    </li>
-    <li>
-        <strong>addSuggestions</strong> &ndash; Set this property to false if you don't want the plugin to search through
-        the form for <a href="#default-validators_suggest">input suggestions</a>.
-    </li>
-</ul>
+                    <ul>
+                        <li>
+                            <strong>validateOnBlur</strong> &ndash; Set this property to false if you only want the form
+                            to become
+                            validated when the user clicks on the submit button.
+                        </li>
+                        <li>
+                            <strong>showHelpOnFocus</strong> &ndash; Set this property to false if you don't want the
+                            plugin
+                            to search through the form for <a href="#default-validators_help">help information</a>.
+                        </li>
+                        <li>
+                            <strong>addSuggestions</strong> &ndash; Set this property to false if you don't want the
+                            plugin to search through
+                            the form for <a href="#default-validators_suggest">input suggestions</a>.
+                        </li>
+                    </ul>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     validateOnBlur : false,
     showHelpOnFocus : false,
@@ -2611,19 +2728,20 @@ $.validate({
 });
 </pre>
 
-<h3 data-page-section="html5:HTML5 support">HTML5 support</h3>
+                    <h3 data-page-section="html5:HTML5 support">HTML5 support</h3>
 
-<p>As of version 2.2 you can use this plugin as a fallback solution for the validation
-    attributes in the HTML5 specification. Add the module html5 to the module declaration and you can use the
-    following native features:</p>
+                    <p>As of version 2.2 you can use this plugin as a fallback solution for the validation
+                        attributes in the HTML5 specification. Add the module html5 to the module declaration and you
+                        can use the
+                        following native features:</p>
 
-<p><strong>Attributes:</strong> require, pattern, maxlength, min, max, placeholder</p>
+                    <p><strong>Attributes:</strong> require, pattern, maxlength, min, max, placeholder</p>
 
-<p><strong>Input types:</strong> url, date, time, email, number</p>
+                    <p><strong>Input types:</strong> url, date, time, email, number</p>
 
-<p><strong>Elements:</strong> Use the element <code>datalist</code> to create input suggestions</p>
+                    <p><strong>Elements:</strong> Use the element <code>datalist</code> to create input suggestions</p>
 
-<pre class="prettyprint"><div class="convert-code">
+                    <pre class="prettyprint"><div class="convert-code">
 <form action="" method="POST">
     <p>
         E-mail:
@@ -2653,40 +2771,42 @@ $.validate({
     });
 &lt;/script&gt;</pre>
 
-<h3 data-page-section="position:Error message position">Positioning the error messages</h3>
+                    <h3 data-page-section="position:Error message position">Positioning the error messages</h3>
 
-<p>
-    The configuration parameter <code>errorMessagePosition</code> is used to tell whether
-    or not error messages should be displayed in the top of the form or beside each input
-    when the form gets submitted. The value is either set to <code>top</code> (which is default) or <code>inline</code>.
-</p>
+                    <p>
+                        The configuration parameter <code>errorMessagePosition</code> is used to tell whether
+                        or not error messages should be displayed in the top of the form or beside each input
+                        when the form gets submitted. The value is either set to <code>top</code> (which is default) or
+                        <code>inline</code>.
+                    </p>
 
-<form action="#" class="form-horizontal well test-form top-messages">
+                    <form action="#" class="form-horizontal well test-form top-messages">
 
-    <div class="control-group">
-        <label class="control-label">E-mail:</label>
-        <div class="controls">
-            <input type="text" data-validation="email"
-                   data-validation-error-msg="You did not enter a valid e-mail">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <label class="control-label">E-mail:</label>
+                            <div class="controls">
+                                <input type="text" data-validation="email"
+                                    data-validation-error-msg="You did not enter a valid e-mail">
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Password:</label>
-        <div class="controls">
-            <input type="password" data-validation="required" data-validation-error-msg="You did not enter a password"/>
-        </div>
-    </div>
+                        <div class="control-group">
+                            <label class="control-label">Password:</label>
+                            <div class="controls">
+                                <input type="password" data-validation="required"
+                                    data-validation-error-msg="You did not enter a password" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" class="btn" value="Validate">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="submit" class="btn" value="Validate">
+                            </div>
+                        </div>
 
-</form>
+                    </form>
 
-<pre class="prettyprint"><div class="convert-code">
+                    <pre class="prettyprint"><div class="convert-code">
     <form action="" method="POST">
         <p>
             E-mail:
@@ -2711,16 +2831,16 @@ $.validate({
     });
 &lt;/script&gt;</pre>
 
-<p>
-    <strong>Configure a specific message container for a certain input</strong>
-</p>
+                    <p>
+                        <strong>Configure a specific message container for a certain input</strong>
+                    </p>
 
-<p>
-    You can point out the location of an error message for a certain input by using the attribute
-    <code>data-validation-error-msg-container</code>.
-</p>
+                    <p>
+                        You can point out the location of an error message for a certain input by using the attribute
+                        <code>data-validation-error-msg-container</code>.
+                    </p>
 
-<pre class="prettyprint"><div class="convert-code">
+                    <pre class="prettyprint"><div class="convert-code">
 <div id="email-error-dialog"></div>
 <p>
     E-mail:
@@ -2731,16 +2851,16 @@ $.validate({
 </div>
 </pre>
 
-<p>
-    <strong>Custom methods that handles positioning of error messages</strong>
-</p>
+                    <p>
+                        <strong>Custom methods that handles positioning of error messages</strong>
+                    </p>
 
-<p>
-    There's two configuration parameters that can be used to control how error messages
-    gets added to the DOM.
-</p>
+                    <p>
+                        There's two configuration parameters that can be used to control how error messages
+                        gets added to the DOM.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     inlineErrorMessageCallback: function($input, errorMessage, config) {
        // Return an element that should contain the error message.
@@ -2753,13 +2873,13 @@ $.validate({
 });
 </pre>
 
-<p>
-    If wanting to use a custom method that handles the displaying/removing of error messages you
-    should use the two methods described above. Return false to prevent the default behaviour when
-    adding/removing error messages. Example:
-</p>
+                    <p>
+                        If wanting to use a custom method that handles the displaying/removing of error messages you
+                        should use the two methods described above. Return false to prevent the default behaviour when
+                        adding/removing error messages. Example:
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     inlineErrorMessageCallback:  function($input, errorMessage, config) {
        if (errorMessage) {
@@ -2780,33 +2900,35 @@ $.validate({
 });
 </pre>
 
-<p>
-    Notice that the default configuration uses <code>errorMessagePosition: 'top'</code>
-    in conjunction with <code>validateOnBlur: true</code> which means that <code>inlineErrorMessageCallback</code>
-    will be called when input is validated on blur and that the <code>submitErrorMessageCallback</code>
-    will be called when the form gets submitted.
-</p>
-            </div>
-            <div class="page localization" id="localization">
-                <h1>Localization</h1>
+                    <p>
+                        Notice that the default configuration uses <code>errorMessagePosition: 'top'</code>
+                        in conjunction with <code>validateOnBlur: true</code> which means that
+                        <code>inlineErrorMessageCallback</code>
+                        will be called when input is validated on blur and that the
+                        <code>submitErrorMessageCallback</code>
+                        will be called when the form gets submitted.
+                    </p>
+                </div>
+                <div class="page localization" id="localization">
+                    <h1>Localization</h1>
 
-<p>
-    In this section we will go through the different options when it comes
-    to localization.
-</p>
+                    <p>
+                        In this section we will go through the different options when it comes
+                        to localization.
+                    </p>
 
-<hr />
+                    <hr />
 
-<h3 data-page-section="submit:Built-in language support">Using built-in languages</h3>
+                    <h3 data-page-section="submit:Built-in language support">Using built-in languages</h3>
 
-<p>
-    This plugin comes with all error dialogs translated into numerous different languages.
-    Use the configuration parameter <code>lang</code> when setting up the validation
-    if you want to override the default language (which is English). Set the value of the
-    lang-property to the corresponding language code of the desired translation.
-</p>
+                    <p>
+                        This plugin comes with all error dialogs translated into numerous different languages.
+                        Use the configuration parameter <code>lang</code> when setting up the validation
+                        if you want to override the default language (which is English). Set the value of the
+                        lang-property to the corresponding language code of the desired translation.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     lang : 'de'
 });
@@ -2830,13 +2952,13 @@ $.validate({
 */
 </pre>
 
-<h3 data-page-section="inline:Inline dialog declaration">Inline dialog declaration</h3>
+                    <h3 data-page-section="inline:Inline dialog declaration">Inline dialog declaration</h3>
 
-<p>
-    You can use the attribute <code>data-validation-error-msg</code>
-    if you want to declare an error message for a specific input.
-</p>
-<pre class="prettyprint"><div class="convert-code">
+                    <p>
+                        You can use the attribute <code>data-validation-error-msg</code>
+                        if you want to declare an error message for a specific input.
+                    </p>
+                    <pre class="prettyprint"><div class="convert-code">
 <form action="/login">
     <p>
         User name:
@@ -2847,25 +2969,26 @@ $.validate({
 </form>
 </div></pre>
 
-<p>
-    If you have declared several validation rules on a single input you might want to have separate
-    error dialogs for each rule. This is accomplished by using attribute <code>data-validation-error-msg-[VALIDATION_RULE]</code>
-</p>
+                    <p>
+                        If you have declared several validation rules on a single input you might want to have separate
+                        error dialogs for each rule. This is accomplished by using attribute
+                        <code>data-validation-error-msg-[VALIDATION_RULE]</code>
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;input name=&quot;user&quot;
     data-validation=&quot;required alphanumeric&quot;
     data-validation-error-msg-required=&quot;You must enter a user name&quot;
     data-validation-error-msg-alphanumeric=&quot;User name may only contain alphanumeric characters&quot;/&gt;
 </pre>
 
-<h3 data-page-section="object:Custom language object">Custom language object</h3>
+                    <h3 data-page-section="object:Custom language object">Custom language object</h3>
 
-<p>
-    All error dialogs can be overwritten by passing an object to the setup function.
-</p>
+                    <p>
+                        All error dialogs can be overwritten by passing an object to the setup function.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -2917,22 +3040,23 @@ $.validate({
     });
 &lt;/script&gt;</pre>
 
-<p><strong>Other developers has also read</strong></p>
-<p>- <a href="#configuration_position">How to change location of the error dialogs</a>.</p>
-            </div>
-            <div class="page advanced" id="advanced">
-                <h1>Advanced examples</h1>
+                    <p><strong>Other developers has also read</strong></p>
+                    <p>- <a href="#configuration_position">How to change location of the error dialogs</a>.</p>
+                </div>
+                <div class="page advanced" id="advanced">
+                    <h1>Advanced examples</h1>
 
 
-<hr/>
+                    <hr />
 
-<h3 data-page-section="programmatically:Validate programmatically">Validate programatically</h3>
-  
-<p>
-  You can use the function <code>$.fn.validate</code> if you want to trigger the validation programmatically.
-</p>
+                    <h3 data-page-section="programmatically:Validate programmatically">Validate programatically</h3>
 
-<pre class="prettyprint">
+                    <p>
+                        You can use the function <code>$.fn.validate</code> if you want to trigger the validation
+                        programmatically.
+                    </p>
+
+                    <pre class="prettyprint">
 $('#the-input').validate(function(valid, elem) {
    console.log('Element '+elem.name+' is '+( valid ? 'valid' : 'invalid'));
 });
@@ -2941,20 +3065,23 @@ $('#the-input').validate(function(valid, elem) {
 $('#container').validate(function(valid, elem) {
    console.log('Element '+elem.name+' is '+( valid ? 'valid' : 'invalid'));
 }, {errorMessagePosition: $('#error-wrapper')});
-</pre>  
+</pre>
 
-<h3 data-page-section="submit:Validate form without submit">Validate form without submit</h3>
+                    <h3 data-page-section="submit:Validate form without submit">Validate form without submit</h3>
 
-<p>You can use the method <code>$.fn.isValid(lang, config, displayErrors)</code> if you want to validate a form programmatically.
-    The function takes three arguments. The first argument being an object used to override the default <a href="#localization_object">
-        error dialogs</a> and the second argument
-    being the configuration object. Use the third argument to tell the validation function
-    if error dialogs should be displayed or not.</p>
+                    <p>You can use the method <code>$.fn.isValid(lang, config, displayErrors)</code> if you want to
+                        validate a form programmatically.
+                        The function takes three arguments. The first argument being an object used to override the
+                        default <a href="#localization_object">
+                            error dialogs</a> and the second argument
+                        being the configuration object. Use the third argument to tell the validation function
+                        if error dialogs should be displayed or not.</p>
 
-<p>Here you can see an example code where we collect all the error dialogs during the validation and pass them
-    on to a custom function displaying the error dialogs.</p>
+                    <p>Here you can see an example code where we collect all the error dialogs during the validation and
+                        pass them
+                        on to a custom function displaying the error dialogs.</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 // Array used as error collection
 var errors = [],
 
@@ -2987,31 +3114,38 @@ $('#check-form').on('click', function() {
 });
 &lt;/script&gt;</pre>
 
-<p>
-    <strong>Notice!</strong> This method won't be able to tell if the form is valid if your'e using
-    asynchronous validators, like the <a href="#security-validators_backend">server-side validator</a> and
-    the <a href="#file-validators_dimension">image dimensions validator</a>.
-    In such a case you must combine the method call with the <a href="#configuration_callbacks">onSuccess
-    callback</a>.
-</p>
+                    <p>
+                        <strong>Notice!</strong> This method won't be able to tell if the form is valid if your'e using
+                        asynchronous validators, like the <a href="#security-validators_backend">server-side
+                            validator</a> and
+                        the <a href="#file-validators_dimension">image dimensions validator</a>.
+                        In such a case you must combine the method call with the <a
+                            href="#configuration_callbacks">onSuccess
+                            callback</a>.
+                    </p>
 
-<hr />
+                    <hr />
 
-<h3 data-page-section="jsonly:Setup validation using JavaScript">Setup validation using only JavaScript</h3>
+                    <h3 data-page-section="jsonly:Setup validation using JavaScript">Setup validation using only
+                        JavaScript</h3>
 
-<p>
-    The whole point of this plugin is to not having to write JavaScript code when configuring form validations.
-    If you feel the need to configure your form validation using JavaScript you probably should look into
-    <a href="http://jqueryvalidation.org/" target="_blank">jquery-validation</a> or <a href="http://formvalidation.io/" target="_blank">formvalidation.io</a> or any of the other superb form validation solutions out
-    there.
-</p>
+                    <p>
+                        The whole point of this plugin is to not having to write JavaScript code when configuring form
+                        validations.
+                        If you feel the need to configure your form validation using JavaScript you probably should look
+                        into
+                        <a href="http://jqueryvalidation.org/" target="_blank">jquery-validation</a> or <a
+                            href="http://formvalidation.io/" target="_blank">formvalidation.io</a> or any of the other
+                        superb form validation solutions out
+                        there.
+                    </p>
 
-<p>
-    But there is of course a way to accomplish this using jQuery-Form-Validator as well, by
-    using the module <code>jsconf</code>.
-</p>
+                    <p>
+                        But there is of course a way to accomplish this using jQuery-Form-Validator as well, by
+                        using the module <code>jsconf</code>.
+                    </p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 &lt;script&gt;
     var config = {
       // ordinary validation config
@@ -3044,24 +3178,25 @@ $.validate({
 &lt;/script&gt;
 </pre>
 
-<p>The first call to <code>$.validate</code> should only contain the module declaration
-    (it must also contain jsconf) and a callback for the event <code>onModulesLoaded</code>.
-    In the callback you invoke the function <code>$.setupValidation</code> with the configuration
-    object as argument.</p>
+                    <p>The first call to <code>$.validate</code> should only contain the module declaration
+                        (it must also contain jsconf) and a callback for the event <code>onModulesLoaded</code>.
+                        In the callback you invoke the function <code>$.setupValidation</code> with the configuration
+                        object as argument.</p>
 
-<p>The configuration object supports all the ordinary configuration options. Use the
-    property <code>validate</code> to tell the jsconf-module which elements that should have validation rules. Begin the
-    property with <code>_</code> if you want
-to add an attribute without the data-validation prefix.</p>
+                    <p>The configuration object supports all the ordinary configuration options. Use the
+                        property <code>validate</code> to tell the jsconf-module which elements that should have
+                        validation rules. Begin the
+                        property with <code>_</code> if you want
+                        to add an attribute without the data-validation prefix.</p>
 
-<p>
-    All the configuration options for each validation rule is also supported.
-    When applying them via markup they're all prefixed with
-    <code>data-validation</code>. When declaring them using the jsconf-module
-    you simply exclude the prefix.
-</p>
-        
-<pre class="prettyprint">
+                    <p>
+                        All the configuration options for each validation rule is also supported.
+                        When applying them via markup they're all prefixed with
+                        <code>data-validation</code>. When declaring them using the jsconf-module
+                        you simply exclude the prefix.
+                    </p>
+
+                    <pre class="prettyprint">
     &lt;input type=&quot;file&quot; multiple=&quot;multiple&quot; name=&quot;images&quot;
            data-validation=&quot;length mime size&quot;
            data-validation-optional=&quot;true&quot;
@@ -3072,9 +3207,9 @@ to add an attribute without the data-validation prefix.</p>
             /&gt;
 </pre>
 
-<p>Would be translated into:</p>
+                    <p>Would be translated into:</p>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 var conf = {
    ...
    validate : {
@@ -3091,39 +3226,41 @@ var conf = {
 </pre>
 
 
-<h3 data-page-section="toggleDisabled:Toggle disabled form submit">Toggle disabled form submit</h3>
+                    <h3 data-page-section="toggleDisabled:Toggle disabled form submit">Toggle disabled form submit</h3>
 
-<p>
-    You can use the module <code>toggleDisabled</code> if you want to have the submit button disabled until the form
-    is completely filled out.
-</p>
+                    <p>
+                        You can use the module <code>toggleDisabled</code> if you want to have the submit button
+                        disabled until the form
+                        is completely filled out.
+                    </p>
 
-<form action="#" class="form-horizontal well test-form toggle-disabled">
+                    <form action="#" class="form-horizontal well test-form toggle-disabled">
 
-    <div class="control-group">
-        <label class="control-label">E-mail:</label>
-        <div class="controls">
-            <input type="text" data-validation="email"
-                   data-validation-error-msg="You did not enter a valid e-mail">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <label class="control-label">E-mail:</label>
+                            <div class="controls">
+                                <input type="text" data-validation="email"
+                                    data-validation-error-msg="You did not enter a valid e-mail">
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <label class="control-label">Password:</label>
-        <div class="controls">
-            <input type="password" data-validation="required" data-validation-error-msg="You did not enter a password"/>
-        </div>
-    </div>
+                        <div class="control-group">
+                            <label class="control-label">Password:</label>
+                            <div class="controls">
+                                <input type="password" data-validation="required"
+                                    data-validation-error-msg="You did not enter a password" />
+                            </div>
+                        </div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" class="btn" value="Login">
-        </div>
-    </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="submit" class="btn" value="Login">
+                            </div>
+                        </div>
 
-</form>
+                    </form>
 
-<pre class="prettyprint">
+                    <pre class="prettyprint">
 $.validate({
     modules : 'toggleDisabled',
     disabledFormFilter : 'form.toggle-disabled',
@@ -3131,21 +3268,24 @@ $.validate({
 });
 </pre>
 
-<p>
-    Use the property <code>disabledFormFilter</code> to target specific forms on your page. By omitting the
-    property the disabled feature will become enabled on all forms. Use the property <code>showErrorDialogs</code>
-    to tell the module whether or not to display error dialogs (defaults to true).
-</p>
-            </div>
-            <div class="page custom-validators" id="custom-validators">
-                <h1>Writing a custom validator</h1>
+                    <p>
+                        Use the property <code>disabledFormFilter</code> to target specific forms on your page. By
+                        omitting the
+                        property the disabled feature will become enabled on all forms. Use the property
+                        <code>showErrorDialogs</code>
+                        to tell the module whether or not to display error dialogs (defaults to true).
+                    </p>
+                </div>
+                <div class="page custom-validators" id="custom-validators">
+                    <h1>Writing a custom validator</h1>
 
-<p>
-    You can use the function <code>$.formUtils.addValidator()</code> to add your own validation function. Here's an
-    example of a validator that checks if the input contains an even number.
-</p>
+                    <p>
+                        You can use the function <code>$.formUtils.addValidator()</code> to add your own validation
+                        function. Here's an
+                        example of a validator that checks if the input contains an even number.
+                    </p>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 <div class="convert-code">
     <form action="" method="post">
         <p>
@@ -3173,53 +3313,61 @@ $.validate();
 
 &lt;/script&gt;
 </pre>
-<div class="alert-info well">
-    <strong>Note:</strong> you can also write <a href="#default-validators_custom"
-                                                 style="text-decoration: underline">inline regexp</a> if wanting to
-    do a custom validation
-</div>
+                    <div class="alert-info well">
+                        <strong>Note:</strong> you can also write <a href="#default-validators_custom"
+                            style="text-decoration: underline">inline regexp</a> if wanting to
+                        do a custom validation
+                    </div>
 
-<h3>Required properties passed into $.formUtils.addValidator</h3>
+                    <h3>Required properties passed into $.formUtils.addValidator</h3>
 
-<p><strong>name</strong> - The name of the validator, which is used in the validation attribute of the input
-    element.</p>
+                    <p><strong>name</strong> - The name of the validator, which is used in the validation attribute of
+                        the input
+                        element.</p>
 
-<p><strong>validatorFunction</strong> - Callback function that validates the input. Should return a boolean telling if the
-    value is considered valid or not.</p>
+                    <p><strong>validatorFunction</strong> - Callback function that validates the input. Should return a
+                        boolean telling if the
+                        value is considered valid or not.</p>
 
-<p><strong>errorMessageKey</strong> - Name of <a href="#localization_object">language property</a> that is used in case the value of the input is
-    invalid.</p>
+                    <p><strong>errorMessageKey</strong> - Name of <a href="#localization_object">language property</a>
+                        that is used in case the value of the input is
+                        invalid.</p>
 
-<p><strong>errorMessage</strong> - An alternative error message that is used if errorMessageKey is left with an
-    empty value or isn't defined in the language object.
-    Note that you also can use <a href="#localization">inline error messages</a> in your form.</p>
+                    <p><strong>errorMessage</strong> - An alternative error message that is used if errorMessageKey is
+                        left with an
+                        empty value or isn't defined in the language object.
+                        Note that you also can use <a href="#localization">inline error messages</a> in your form.</p>
 
-<p>The validation function takes these five arguments:</p>
+                    <p>The validation function takes these five arguments:</p>
 
-<ul>
-    <li>value — the value of the input thats being validated</li>
-    <li>$el — jQuery object referring to the input element being validated</li>
-    <li>config — Object containing the configuration of this form validation</li>
-    <li>language — Object with error dialogs</li>
-    <li>$form — jQuery object referring to the form element being validated</li>
-</ul>
+                    <ul>
+                        <li>value — the value of the input thats being validated</li>
+                        <li>$el — jQuery object referring to the input element being validated</li>
+                        <li>config — Object containing the configuration of this form validation</li>
+                        <li>language — Object with error dialogs</li>
+                        <li>$form — jQuery object referring to the form element being validated</li>
+                    </ul>
 
-<hr/>
+                    <hr />
 
-<h2>Creating a custom module</h2>
+                    <h2>Creating a custom module</h2>
 
-<p>A "module" is basically a javascript file containing one or more calls to <code>$.formUtils.addValidator()</code>.
-    The module file should either have the file extension <em>.js</em> (as an ordinary javascript file) or <em>.dev.js</em>
-</p>
+                    <p>A "module" is basically a javascript file containing one or more calls to
+                        <code>$.formUtils.addValidator()</code>.
+                        The module file should either have the file extension <em>.js</em> (as an ordinary javascript
+                        file) or <em>.dev.js</em>
+                    </p>
 
-<p>Using the file extension <em>.dev.js</em> will tell <code>$.formUtils.loadModules</code> to always append a
-    timestamp to the
-    end of the URL, so that the browser never caches the file. You should of course never use <em>.dev.js</em> on a
-    production website.</p>
+                    <p>Using the file extension <em>.dev.js</em> will tell <code>$.formUtils.loadModules</code> to
+                        always append a
+                        timestamp to the
+                        end of the URL, so that the browser never caches the file. You should of course never use
+                        <em>.dev.js</em> on a
+                        production website.</p>
 
-<h3>Loading your module</h3>
+                    <h3>Loading your module</h3>
 
-<pre class="prettyprint linenums">
+                    <pre class="prettyprint linenums">
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js&quot;>&lt;/script&gt;
 &lt;script&gt;
@@ -3231,125 +3379,105 @@ $.validate();
 &lt;/script&gt;
 </pre>
 
-<p>The first argument of <code>$.formUtils.loadModules</code> is a comma separated string with names of module
-    files, without
-    file extension (add .dev if the file name is for example <em>mymodule.dev.js</em>, this will ensure you that the
-    browser never
-    caches the javascript).</p>
+                    <p>The first argument of <code>$.formUtils.loadModules</code> is a comma separated string with names
+                        of module
+                        files, without
+                        file extension (add .dev if the file name is for example <em>mymodule.dev.js</em>, this will
+                        ensure you that the
+                        browser never
+                        caches the javascript).</p>
 
-<p>The second argument is the path where the module files are located. This argument is optional, if not given the
-    module
-    files has to be located in the same directory as the core modules shipped together with this jquery plugin.</p>
-            </div>
-            <div class="page credits" id="credits">
-                <h1>Credits</h1>
+                    <p>The second argument is the path where the module files are located. This argument is optional, if
+                        not given the
+                        module
+                        files has to be located in the same directory as the core modules shipped together with this
+                        jquery plugin.</p>
+                </div>
+                <div class="page credits" id="credits">
+                    <h1>Credits</h1>
 
-<p>
-    Want to contribute? All you have to do is to fork this project on <a
-        href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank">github</a>
-    and do a pull request.
-</p>
+                    <p>
+                        Want to contribute? All you have to do is to fork this project on <a
+                            href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank">github</a>
+                        and do a pull request.
+                    </p>
 
-<hr/>
+                    <hr />
 
-<h3>Author / Project Maintainer</h3>
+                    <h3>Author / Project Maintainer</h3>
 
-<p id="maintainer"></p>
+                    <p id="maintainer"></p>
 
-<h3>Contributors</h3>
+                    <h3>Contributors</h3>
 
-<p id="contribs"></p>
+                    <p id="contribs"></p>
 
-<h3>Additional credits</h3>
+                    <h3>Additional credits</h3>
 
-<p>
-    <a class="profile" href="http://projects.scottsplayground.com/iri/" target="_blank">Scott Gonzales <em>(URL regexp)</em></a><br/>
-    <a class="profile" href="http://www.mypocket-technologies.com" target="_blank">Darren Mason <em>(Password strength meter)</em></a>
-</p>
-            </div>
-            <div class="page donate" id="donate">
-                <h1>Donate</h1>
+                    <p>
+                        <a class="profile" href="http://projects.scottsplayground.com/iri/" target="_blank">Scott
+                            Gonzales <em>(URL regexp)</em></a><br />
+                        <a class="profile" href="http://www.mypocket-technologies.com" target="_blank">Darren Mason
+                            <em>(Password strength meter)</em></a>
+                    </p>
+                </div>
+                <div class="page donate" id="donate">
+                    <h1>Donate</h1>
 
-<p>
-    You are more than welcome to give a donation. By clicking on the button below you will be
-    re-directed to PayPal where you can specify how much you want to donate and complete a
-    secure transaction.
-</p>
+                    <p>
+                        You are more than welcome to give a donation. By clicking on the button below you will be
+                        re-directed to PayPal where you can specify how much you want to donate and complete a
+                        secure transaction.
+                    </p>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_s-xclick"/>
-    <input type="hidden" name="hosted_button_id" value="5PME86XEFHB8S"/>
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
-           alt="PayPal - The safer, easier way to pay online!"/>
-    <img alt="" border="0" src="https://www.paypalobjects.com/sv_SE/i/scr/pixel.gif" width="1" height="1"/>
-</form>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="5PME86XEFHB8S" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                            border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                        <img alt="" border="0" src="https://www.paypalobjects.com/sv_SE/i/scr/pixel.gif" width="1"
+                            height="1" />
+                    </form>
 
-<hr />
+                    <hr />
 
-<h3>Ads on formvalidator.net</h3>
-<p>
-    This website has grown in popularity over the last months. Because of this an ad banner have
-    been introduced to help out with the cost of running the website.
-</p>
-            </div>
-            <div class="page license" id="license">
-                <h1>License</h1>
+                    <h3>Ads on formvalidator.net</h3>
+                    <p>
+                        This website has grown in popularity over the last months. Because of this an ad banner have
+                        been introduced to help out with the cost of running the website.
+                    </p>
+                </div>
+                <div class="page license" id="license">
+                    <h1>License</h1>
 
-<p>
-    This plugin is released under the MIT license.
-</p>
-            </div>
-            <div class="page lunr" id="lunr">
-                <h1 data-page-section="search">Search</h1>
+                    <p>
+                        This plugin is released under the MIT license.
+                    </p>
+                </div>
+                <div class="page lunr" id="lunr">
+                    <h1 data-page-section="search">Search</h1>
 
-<p class="lunr-search-wrapper">
-    <input type="search" placeholder="Search..." />
-    <label style="display: inline;">
-        <button class="btn btn-inverse lunr-search-btn" style=" margin: -9px 0 0 8px">
-            <i class="icon-white icon-search"></i>
-        </button>
-    </label>
-</p>
+                    <p class="lunr-search-wrapper">
+                        <input type="search" placeholder="Search..." />
+                        <label style="display: inline;">
+                            <button class="btn btn-inverse lunr-search-btn" style=" margin: -9px 0 0 8px">
+                                <i class="icon-white icon-search"></i>
+                            </button>
+                        </label>
+                    </p>
 
-<div id="lunr-search-result"></div>
+                    <div id="lunr-search-result"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer id="footer">
-        <p>
-            This website was built using <a href="https://github.com/victorjonsson/opgen">OPgen</a>
-        </p>
-    </footer>
-
-</div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.5.11/lunr.min.js"></script>
-<script src="static/script/prettyprint.js"></script>
-<script src="static/script/main.min.js?v=2.3.23"></script>
-<script src="static/script/website.js?v=2.3.23"></script>
-
-<script>
-    if ( window.location.href.indexOf('://localhost') == -1 ) {
-
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-41788001-1', 'formvalidator.net');
-        ga('send', 'pageview');
-    }
-</script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.5.11/lunr.min.js"></script>
+    <script src="static/script/prettyprint.js"></script>
+    <script src="static/script/main.min.js"></script>
+    <script src="static/script/website.js"></script>
 </body>
+
 </html>
